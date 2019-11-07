@@ -1,0 +1,75 @@
+#loginLink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#signupLink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#personalGreetingDiv {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#greetingText {
+    padding: 0;
+    margin-bottom: 6px;
+}
+
+#logoutButton {
+	box-shadow:inset 0px 1px 0px 0px #f7c5c0;
+	background:linear-gradient(to bottom, #fc8d83 5%, #ffb7b2 100%);
+	background-color:#fc8d83;
+	border-radius:6px;
+	border:1px solid #d83526;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:'Fira Sans';
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+}
+#logoutButton:hover {
+	background:linear-gradient(to bottom, #ffb7b2 5%, #fc8d83 100%);
+	background-color:#ffb7b2;
+}
+#logoutButton:active {
+	position:relative;
+	top:1px;
+}
+
+#bannerBar {
+    background-color: #ff9898;
+    height: 3px;
+    width: 100%;
+}
+
+#titleText {
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+#mainIcon {
+    margin-left: 30px;
+}
+
+#iconAndTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#greetingAndLogout {
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
+}
