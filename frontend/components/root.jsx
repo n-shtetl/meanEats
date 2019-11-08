@@ -1,5 +1,5 @@
 import { HashRouter } from "react-router-dom";
-import App from "./App";
+import App from "./app.jsx";
 import { Provider } from 'react-redux';
 import React from 'react';
 
