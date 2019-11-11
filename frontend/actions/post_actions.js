@@ -12,17 +12,17 @@ const receivePost = (post) => ({
     post
 })
 
-export const fetchPosts = () => {
+export const fetchPosts = () => dispatch => {
     return PostApiUtil.fetchPosts()
         .then(posts => dispatch(receivePosts(posts)))
 }
 
-export const fetchPost = (postId) => {
+export const fetchPost = (postId) => dispatch =>{
     return PostApiUtil.fetchPost(postId)
         .then(post => dispatch(receivePost(post)))
 }
 
-export const createPost = (post) => {
+export const createPost = (post) => dispatch => {
     return PostApiUtil.createPost(post)
         .then(post => dispatch(receivePost(post)))
 }

@@ -5,4 +5,6 @@ class Post < ApplicationRecord
         primary_key: :id, 
         foreign_key: :author_id,
         class_name: :Author
+
+    has_many_attached :photos
 end

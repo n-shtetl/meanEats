@@ -2,8 +2,10 @@ import React from "react";
 import LoginFormContainer from './session_form/LoginFormContainer';
 import SignupFormContainer from './session_form/SignupFormContainer';
 import GreetingContainer from './greeting/GreetingContainer';
-import { Route } from 'react-router-dom';
-import { AuthRoute } from '../util/route_util';
+import PostIndexContainer from './posts/PostIndexContainer';
+import PostShowContainer from './posts/PostShowContainer';
+import { Route, Switch } from 'react-router-dom';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
   <div id="app">
@@ -14,6 +16,10 @@ const App = () => (
         {/* <GreetingContainer/> */}
         <Route path="/" component={GreetingContainer}/>
     </header>
+    <Switch>
+      <ProtectedRoute exact path="/" component={PostIndexContainer} />
+      <ProtectedRoute exact path="/posts/:postId" component={PostShowContainer}/>
+    </Switch>
     <AuthRoute path="/login" component={LoginFormContainer} />
     <AuthRoute path="/signup" component={SignupFormContainer} />
   </div>
