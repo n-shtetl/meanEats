@@ -1,3 +1,56 @@
+#mainNav {
+    width: 50%;
+}
+
+#dropdownMenus {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 1000;
+}
+
+.dropdown {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown:hover .dropdownElements {
+    visibility: visible;
+}
+
+.dropdownElements {
+    background-color: #429dff;
+    position: absolute;
+    top: 20px;
+    color: white;
+    text-align: left;
+    font-family: 'Raleway';
+    font-weight: 200;
+    visibility: hidden;
+    width: 200px;
+}
+
+.dropdownSubElement:hover {
+    background-color: rgb(49, 74, 118);
+}
+
+
+.dropdownElement {
+    margin: 10px;
+    padding-right: 10px;
+    width: 100%;
+    clear: both;
+}
+
+
+
+
+.dropdownSubElement {
+    margin: 4px 0px 4px 0px;
+    width: 180px;
+}
+
 #loginLink {
     display: flex;
     flex-direction: column;

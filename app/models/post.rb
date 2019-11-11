@@ -7,4 +7,6 @@ class Post < ApplicationRecord
         class_name: :Author
 
     has_many_attached :photos
+
+    has_many :tags
 end
