@@ -19,6 +19,7 @@ const App = () => (
     <Switch>
       <ProtectedRoute exact path="/" component={PostIndexContainer} />
       <ProtectedRoute exact path="/posts/:postId" component={PostShowContainer}/>
+      {/* <ProtectedRoute exact path="/tags/:tagName" component={TagIndexContainer}/> */}
     </Switch>
     <AuthRoute path="/login" component={LoginFormContainer} />
     <AuthRoute path="/signup" component={SignupFormContainer} />

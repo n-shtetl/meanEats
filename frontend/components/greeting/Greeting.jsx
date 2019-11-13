@@ -41,7 +41,7 @@ export const Greeting = (props) => {
                     <div className="dropdown">Recipes
                         <div className="dropdownElements">
                             <div className="dropdownElement">Browse By:
-                                <div className="dropdownSubElement">Ingredient</div>
+                                <Link to="/tags/Ingredient"><div className="dropdownSubElement">Ingredient</div></Link>
                                 <div className="dropdownSubElement">Cuisine</div>
                                 <div className="dropdownSubElement">Dish Type</div>
                                 <div className="dropdownSubElement">Cooking Method</div>
