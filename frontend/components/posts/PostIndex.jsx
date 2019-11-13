@@ -8,18 +8,22 @@ class PostIndex extends React.Component {
 
     componentDidMount() {
         this.props.fetchPosts();
+        this.props.fetchPostToTags();
     }
 
     render() {
         const { posts } = this.props;
-        console.log(posts);
+        const { postToTags } = this.props;
         return (
+            <div>
             <div id="postIndex">
                 {posts.map((post) => (
                     <PostIndexItem post={post}
+                                   tags={postToTags.filter(pTT => pTT.post_id === post.id)}
                                    key={post.id}/>
 
                 ))}
+            </div>
             </div>
         )
     }

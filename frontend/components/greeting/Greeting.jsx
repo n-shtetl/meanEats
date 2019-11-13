@@ -30,9 +30,10 @@ export const Greeting = (props) => {
         return (props.location.pathname === '/login') ? signupLink() : loginLink() ;
     }
     const PersonalGreeting = () => (
+        <div className="header">
         <div id="personalGreetingDiv">
             <div id='iconAndTitle'>
-            <img id="mainIcon" src="cooking_pot.png" height="100" width="100"/>
+            <Link to="/"><img id="mainIcon" src="cooking_pot.png" height="100" width="100"/></Link>
             <h2 id='titleText'>Mean Eats</h2>
             </div>
             <nav id="mainNav">
@@ -74,6 +75,8 @@ export const Greeting = (props) => {
             <h4 id="greetingText">Welcome, {props.currentUser.username}</h4>
             <button id="logoutButton" onClick={props.logout}>Logout</button>
             </div>
+        </div>
+        <div id="bannerBar"></div>
         </div>
     )
     return props.currentUser ? PersonalGreeting() : SessionLinks();

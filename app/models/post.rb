@@ -8,5 +8,12 @@ class Post < ApplicationRecord
 
     has_many_attached :photos
 
-    has_many :tags
+    has_many :posttotags,
+        primary_key: :id,
+        foreign_key: :post_id,
+        class_name: :PostToTag
+
+    has_many :tags,
+        through: :posttotags,
+        source: :tag
 end

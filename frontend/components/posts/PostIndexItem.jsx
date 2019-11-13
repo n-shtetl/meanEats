@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
+
 const PostIndexItem = (props) => {
+    console.log(props);
     return (
         <div id="postIndexItem">  
             <Link to={`/posts/${props.post.id}`} id>

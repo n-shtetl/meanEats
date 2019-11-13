@@ -7,7 +7,7 @@ class Api::SessionsController < ApplicationController
       # redirect_to root_url
       render '/api/users/show'
     else
-      render json: ['Invalid credentials'], status: 422;
+      render json: ['Invalid credentials'], status: 422
     end
   end
 

@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
+import { login } from './actions/session_actions';
 import { fetchPosts, fetchPost, createPost } from './actions/post_actions';
+import { fetchPostToTags, fetchPostToTag } from './actions/post_to_tag_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -26,6 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
     window.fetchPosts = fetchPosts;
     window.fetchPost = fetchPost;
     window.createPost = createPost;
+    window.login = login;
+    window.fetchPostToTags = fetchPostToTags;
+    window.fetchPostToTag = fetchPostToTag;
     //test fx's above
     ReactDOM.render(<Root store={store}/>, root);
 })

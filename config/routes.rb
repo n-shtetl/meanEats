@@ -7,6 +7,8 @@
       resources :users, only: [:create]
       resource :session, only: [:create, :destroy]
       resources :posts, only: [:create, :index, :show]
+      resources :tags, only: [:create, :destroy, :index, :show]
+      resources :post_to_tags, only: [:index, :show, :create, :destroy]
     end
 
   end
