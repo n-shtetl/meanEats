@@ -33,3 +33,9 @@ a {
 #imageWrapper {
     margin: 0;
 }  
+
+#postIndexItemKicker {
+    margin: 10px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}

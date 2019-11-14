@@ -13,6 +13,9 @@ const PostIndexItem = (props) => {
                     <div id="titleText">
                    {props.post.title}
                    </div>
+                   <div id="postIndexItemKicker">
+                    <em>{props.post.kicker}</em>
+                   </div>
                 </div>
             </Link>
         </div>
