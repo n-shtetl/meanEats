@@ -79,5 +79,6 @@ export const Greeting = (props) => {
         <div id="bannerBar"></div>
         </div>
     )
+    console.log(props);
     return props.currentUser ? PersonalGreeting() : SessionLinks();
 }
