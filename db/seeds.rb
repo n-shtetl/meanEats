@@ -33,6 +33,7 @@ img_files = ['https://meaneats-seeds.s3-us-west-1.amazonaws.com/apple-cider-doug
              'https://meaneats-seeds.s3-us-west-1.amazonaws.com/spatchcocked-turkey.jpg',
              'https://meaneats-seeds.s3-us-west-1.amazonaws.com/stop-using-nonstick-cookware-how-to.jpg']
 
+author1 = Author.create(name: 'author')
 post1 = Post.create(title: 'Apple Cider Doughnut Cake Recipe',
 author_id: 1,
 kicker: 'An apple cider doughnut-inspired bundt cake to usher in fall',
@@ -41,5 +42,7 @@ directions: "1. For the Cake: Adjust oven rack to middle position and preheat ov
 ingredients: "For the Cake:\n9 tablespoons (4 1/2 ounces) unsalted butter, at room temperature\n1 large Granny Smith apple (about 8 ounces), peeled, cored, and roughly chopped\n1 1/2 cups apple cider\n1/2 cup milk, at room temperature\n2 1/2 cups (about 12 1/2 ounces) all-purpose flour\n1 1/2 teaspoons baking powder\n1/2 teaspoon baking soda\n1 teaspoon salt\n1/4 teaspoon ground nutmeg\n1/4 teaspoon ground mace\n3/4 cup (about 5 1/4 ounces) sugar\n1/2 cup (about 3 1/2 ounces) packed light brown sugar\n3 large eggs, at room temperature\n1/4 cup vegetable oil\n1 teaspoon pure vanilla extract\nFor the Cinnamon Sugar Coating\n6 tablespoons granulated sugar\n1 teaspoon ground cinnamon\n1/8 teaspoon ground nutmeg\n1/8 teaspoon salt\n")
 file1 = open(img_files.shift)
 post1.photos.attach(io: file1, filename: 'img1')
+
+
 
 
