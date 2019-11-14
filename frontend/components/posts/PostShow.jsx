@@ -13,8 +13,11 @@ class PostShow extends React.Component {
         if (!this.props.post) return null;
         return (
             <div className='postShow'>
-                <div>{this.props.post.title}</div>
-                <img src={this.props.post.photoUrl}/>
+                <h1 className='postShowTitle'>{this.props.post.title}</h1>
+                <div className="postShowImageWrapper">
+                    <img className='postShowImage' src={this.props.post.photoUrl}/>
+                </div>
+                <div>{this.props.post.body}</div>
             </div>
         )
     }
