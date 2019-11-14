@@ -6,6 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.destroy_all
+Post.destroy_all
+Tag.destroy_all
+PostToTag.destroy_all
+
 user1 = User.create([{username: 'demoUser', email: 'gmail', password: 'password'}])
 
 img_files = ['https://meaneats-seeds.s3-us-west-1.amazonaws.com/apple-cider-doughnut.jpg',
@@ -103,7 +108,6 @@ tag1 = Tag.create(tag: "Recipes")
 tag2 = Tag.create(tag: "How-to's")
 tag3 = Tag.create(tag: "Culture")
 
-postToTag1 = PostToTag.create(post)
     
 
 

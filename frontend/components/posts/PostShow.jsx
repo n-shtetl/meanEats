@@ -19,7 +19,7 @@ class PostShow extends React.Component {
                 <div className="postShowImageWrapper">
                     <img className='postShowImage' src={this.props.post.photoUrl}/>
                 </div>
-                <div>
+                <div className="postShowBody">
                     {bodyArr.map(para => (
                         <div>
                         <div>{para}</div>
