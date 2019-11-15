@@ -31,9 +31,9 @@ export const Greeting = (props) => {
     }
     const PersonalGreeting = () => (
         <div className="header">
-        <div id="personalGreetingDiv">
+        <div className="personalGreetingDiv">
             <div id='iconAndTitle'>
-            <Link to="/"><img id="mainIcon" src="cooking_pot.png" height="100" width="100"/></Link>
+            <Link to="/"><div id="mainIconWrapper"><img id="mainIcon" src="cooking_pot.png" height="100" width="100"/></div></Link>
             <h2 id='titleText'>Mean Eats</h2>
             </div>
             <nav id="mainNav">
@@ -84,3 +84,16 @@ export const Greeting = (props) => {
     console.log(props);
     return props.currentUser ? PersonalGreeting() : SessionLinks();
 }
+
+$(window).scroll(function() {     
+    var scroll = $(window).scrollTop();
+    var el = $("#mainIcon")
+    if (scroll > 100) {
+        $(".personalGreetingDiv").addClass("collapse");
+        $("#mainIcon").detach();
+    }
+    else {
+        $(".personalGreetingDiv").removeClass("collapse");
+        $(".personalGreetingDiv").prepend(<img id="mainIcon" src="cooking_pot.png" height="100" width="100"/>)
+    }
+});

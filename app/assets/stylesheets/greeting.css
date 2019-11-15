@@ -61,11 +61,15 @@
     align-items: center;
 }
 
-#personalGreetingDiv {
+.personalGreetingDiv {
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: space-between;
+}
+
+.active {
+    background-color: red;
 }
 
 #greetingText {
@@ -137,3 +141,8 @@
     position: fixed;
     
 }
+
+.collapse {
+    height: 50px;
+}
+
