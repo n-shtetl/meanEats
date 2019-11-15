@@ -76,7 +76,9 @@ export const Greeting = (props) => {
             <button id="logoutButton" onClick={props.logout}>Logout</button>
             </div>
         </div>
-        <div id="bannerBar"></div>
+        <div id="bannerBar">
+            <div id="progressBar"></div>
+        </div>
         </div>
     )
     console.log(props);

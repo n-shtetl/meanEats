@@ -104,6 +104,12 @@
     width: 100% ;
 }
 
+#progressBar {
+    height: 3px;
+    width: 0%;
+    background-color: #000000;
+}
+
 #titleText {
     margin-left: 25px;
     margin-top: 10px;
