@@ -33,8 +33,7 @@ export const Greeting = (props) => {
         <div className="header">
         <div className="personalGreetingDiv">
             <div id='iconAndTitle'>
-            <Link to="/"><div id="mainIconWrapper"><img id="mainIcon" src="cooking_pot.png" height="100" width="100"/></div></Link>
-            <h2 id='titleText'>Mean Eats</h2>
+            <Link to="/"><div id="mainIconWrapper"><img id="mainIcon" src="Serious_Eats_Logo.png" height="100" width="100"/></div></Link>
             </div>
             <nav id="mainNav">
                 <div id="dropdownMenus">
@@ -57,6 +56,16 @@ export const Greeting = (props) => {
                                 <div className="dropdownSubElement">Kitchen Tips</div> 
                                 <div className="dropdownSubElement">Entertaining</div> 
                             </div>
+                        </div>
+                    </div>
+                    <div className="dropdown">Product Recs
+                        <div className="dropdownElements">
+                            <div className="dropdownElement">
+                            <div className="dropdownSubElement">Equipment Reviews</div>
+                                <div className="dropdownSubElement">Taste Tests</div>
+                                <div className="dropdownSubElement">Buying Guides</div>
+                                <div className="dropdownSubElement">Editor's Picks</div>  
+                            </div> 
                         </div>
                     </div>
                     <div className="dropdown">Culture
@@ -86,14 +95,28 @@ export const Greeting = (props) => {
 }
 
 $(window).scroll(function() {     
-    var scroll = $(window).scrollTop();
-    var el = $("#mainIcon")
-    if (scroll > 100) {
-        $(".personalGreetingDiv").addClass("collapse");
-        $("#mainIcon").detach();
+    let scroll = $(window).scrollTop();
+    let el = $("#mainIcon");
+    let elSrc = el.attr("src");
+    if (scroll > 100 && elSrc !== "smallSELogo.png") {
+       el.fadeOut(250);
+       setTimeout(function() {
+           el.attr('src', 'smallSELogo.png').css('top', '10%')
+       }, 400)
+       setTimeout(function() {
+        el.fadeIn();
+       },450)
+    } else if (scroll <= 100 && elSrc !== "Serious_Eats_Logo.png") {
+        el.fadeOut(250);
+        setTimeout(function() {
+            el.attr('src', 'Serious_Eats_Logo.png').css('top', '33%');
+        }, 400)
+        setTimeout(function() {
+            el.fadeIn();
+        }, 450)
     }
-    else {
-        $(".personalGreetingDiv").removeClass("collapse");
-        $(".personalGreetingDiv").prepend(<img id="mainIcon" src="cooking_pot.png" height="100" width="100"/>)
-    }
+    // else {
+    //     $(".personalGreetingDiv").removeClass("collapse");
+    //     $(".personalGreetingDiv").prepend(<img id="mainIcon" src="cooking_pot.png" height="100" width="100"/>)
+    // }
 });

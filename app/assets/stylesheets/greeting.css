@@ -25,7 +25,7 @@
     top: 20px;
     color: white;
     text-align: left;
-    font-family: 'Raleway';
+    font-family: 'Arimo', sans-serif;
     font-weight: 200;
     visibility: hidden;
     width: 200px;
@@ -103,7 +103,7 @@
 }
 
 #bannerBar {
-    background-color: #98c6ff;
+    background-color: rgb(48,162,204);
     height: 3px;
     width: 100% ;
 }
@@ -120,7 +120,10 @@
 }
 
 #mainIcon {
-    margin-left: 30px;
+    height: 90%;
+    position: absolute;
+    top: 33%;
+    left: 5%;
 }
 
 #iconAndTitle {
@@ -139,7 +142,7 @@
     width: 100%;
     background-color: #efefef;
     position: fixed;
-    
+    color: #383c45;
 }
 
 .collapse {
