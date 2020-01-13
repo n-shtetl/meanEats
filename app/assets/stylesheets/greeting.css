@@ -1,18 +1,51 @@
 #mainNav {
-    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    align-items: center;
+    margin-right: 80px;
 }
 
-#dropdownMenus {
+/* #dropdownMenus {
+    width: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     font-weight: 1000;
-}
+} */
 
 .dropdown {
     cursor: pointer;
-    display: inline-block;
     position: relative;
+    font-size: 20px;
+    padding: 2%;
+}
+
+.upArrow:hover  {
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    width: 0; 
+    height: 0; 
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 10px solid rgb(48,162,204);
+  }
+
+#cultureArrow {
+    margin-left: -32px;
+}
+
+#productArrow {
+    margin-left: -30px;
+}
+
+#howToArrow {
+    margin-left: -30px;
+}
+
+#recipeArrow {
+    margin-left: -30px;
 }
 
 .dropdown:hover .dropdownElements {
@@ -20,15 +53,39 @@
 }
 
 .dropdownElements {
-    background-color: #429dff;
+    background-color: rgb(48,162,204);
     position: absolute;
-    top: 20px;
+    top: 48.5px;
     color: white;
     text-align: left;
-    font-family: 'Arimo', sans-serif;
-    font-weight: 200;
+    font-family: Helvetica;
+    font-weight: 100;
     visibility: hidden;
+    font-size: 90%;
+}
+
+#productRecs {
+    left: 50%;
     width: 200px;
+    margin-left: -100px;    
+}
+
+#howTos {
+    width: 200px;
+    left: 50%;
+    margin-left: -100px;
+}
+
+#recipes {
+    width: 170px;
+    left: 50%;
+    margin-left: -85px;
+}
+
+#culture {
+    width: 180px;
+    left: 50%;
+    margin-left: -90px;
 }
 
 .dropdownSubElement:hover {
@@ -45,7 +102,7 @@
 
 
 .dropdownSubElement {
-    margin: 4px 0px 4px 0px;
+    margin: 12px 0px 12px 0px;
     width: 180px;
 }
 
@@ -68,43 +125,34 @@
     justify-content: space-between;
 }
 
-.active {
-    background-color: red;
-}
 
 #greetingText {
     padding: 0;
     margin-bottom: 6px;
 }
 
-#logoutButton {
-	box-shadow:inset 0px 1px 0px 0px #8588b0;
-	background:linear-gradient(to bottom, #9bb8ff 5%, #2caeff 100%);
-	background-color:#97afff;
-	border-radius:6px;
-	border:1px solid #2667d8;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:'Fira Sans';
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #b23e35;
+#profileIcon {
+    width: 100%;
+    height: auto;
 }
-#logoutButton:hover {
-	background:linear-gradient(to bottom, #5fa7ff 5%, #8f9cff 100%);
-	background-color:#98c6ff;
+
+#logoutDiv:hover {
+    cursor: pointer;
 }
-#logoutButton:active {
-	position:relative;
-	top:1px;
+
+#profileDiv {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+#profileIcon {
+    width: 80%;
+    height: 80%;
 }
 
 #bannerBar {
     background-color: rgb(48,162,204);
-    height: 3px;
+    height: 2px;
     width: 100% ;
 }
 
@@ -120,9 +168,10 @@
 }
 
 #mainIcon {
-    height: 90%;
+    height: 75px;
+    width: 90px;
     position: absolute;
-    top: 33%;
+    top: 10%;
     left: 5%;
 }
 
@@ -131,6 +180,21 @@
     flex-direction: column;
     justify-content: center;
 }
+
+#searchIcon:hover {
+    cursor:pointer;
+}
+
+#searchIcon {
+    width: 80%;
+    height: 80%;
+}
+
+#searchDiv {
+    max-width: 50px;
+    max-height: 50px;
+}
+
 
 #greetingAndLogout {
     display: flex;

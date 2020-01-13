@@ -36,9 +36,8 @@ export const Greeting = (props) => {
             <Link to="/"><div id="mainIconWrapper"><img id="mainIcon" src="Serious_Eats_Logo.png" height="100" width="100"/></div></Link>
             </div>
             <nav id="mainNav">
-                <div id="dropdownMenus">
-                    <div className="dropdown">Recipes
-                        <div className="dropdownElements">
+                    <div className="dropdown"><strong>Recipes</strong><div className="upArrow" id="recipeArrow"></div>
+                        <div className="dropdownElements" id="recipes">
                             <div className="dropdownElement">Browse By:
                                 <Link to="/tags/Ingredient"><div className="dropdownSubElement">Ingredient</div></Link>
                                 <div className="dropdownSubElement">Cuisine</div>
@@ -47,8 +46,8 @@ export const Greeting = (props) => {
                             </div>
                         </div>
                     </div>
-                    <div className="dropdown">How-Tos
-                        <div className="dropdownElements">
+                    <div className="dropdown"><strong>How-Tos</strong><div className="upArrow" id="howToArrow"></div>
+                        <div className="dropdownElements" id="howTos">
                             <div className="dropdownElement">
                                 <div className="dropdownSubElement">Cooking Techniques</div>
                                 <div className="dropdownSubElement">Ingredient Guides</div>
@@ -58,8 +57,8 @@ export const Greeting = (props) => {
                             </div>
                         </div>
                     </div>
-                    <div className="dropdown">Product Recs
-                        <div className="dropdownElements">
+                    <div className="dropdown"><strong>Product Recs</strong><div className="upArrow" id="productArrow"></div>
+                        <div className="dropdownElements" id="productRecs">
                             <div className="dropdownElement">
                             <div className="dropdownSubElement">Equipment Reviews</div>
                                 <div className="dropdownSubElement">Taste Tests</div>
@@ -68,8 +67,8 @@ export const Greeting = (props) => {
                             </div> 
                         </div>
                     </div>
-                    <div className="dropdown">Culture
-                        <div className="dropdownElements">
+                    <div className="dropdown"><strong>Culture</strong><div className="upArrow" id="cultureArrow"></div>
+                        <div className="dropdownElements" id="culture">
                             <div className="dropdownElement">
                                 <div className="dropdownSubElement">Cuisine Guides</div>
                                 <div className="dropdownSubElement">Food History</div>
@@ -78,12 +77,15 @@ export const Greeting = (props) => {
                             </div>
                         </div>
                     </div>
-                </div>
+                    {/* <h4 id="greetingText">Welcome, {props.currentUser.username}</h4> */}
+                    <div id="profileDiv" onClick={props.logout}>
+                        <img id="profileIcon" src="https://img.icons8.com/ios-filled/50/000000/user-female-circle.png"/>
+                    </div>
+                    <div id="searchDiv">
+                        <img id="searchIcon" src="https://img.icons8.com/pastel-glyph/64/000000/search--v2.png"/>
+                    </div>
             </nav>
-            <div id="greetingAndLogout">
-            <h4 id="greetingText">Welcome, {props.currentUser.username}</h4>
-            <button id="logoutButton" onClick={props.logout}>Logout</button>
-            </div>
+            
         </div>
         <div id="bannerBar">
             <div id="progressBar"></div>
@@ -101,7 +103,7 @@ $(window).scroll(function() {
     if (scroll > 100 && elSrc !== "smallSELogo.png") {
        el.fadeOut(250);
        setTimeout(function() {
-           el.attr('src', 'smallSELogo.png').css('top', '10%')
+           el.attr('src', 'smallSELogo.png').css({'top': '0%', 'left':'6.5%', 'width':'50px', 'height':'50px'})
        }, 400)
        setTimeout(function() {
         el.fadeIn();
@@ -109,7 +111,7 @@ $(window).scroll(function() {
     } else if (scroll <= 100 && elSrc !== "Serious_Eats_Logo.png") {
         el.fadeOut(250);
         setTimeout(function() {
-            el.attr('src', 'Serious_Eats_Logo.png').css('top', '33%');
+            el.attr('src', 'Serious_Eats_Logo.png').css({'height':'75px', 'width':'90px', 'top': '10%', 'left':'5%'})
         }, 400)
         setTimeout(function() {
             el.fadeIn();
