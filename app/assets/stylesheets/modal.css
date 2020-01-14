@@ -1,0 +1,32 @@
+.modal-background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 10;
+  }
+  
+  .modal-child {
+    font-family: 'Arimo';
+    font-size: 300%;
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255,255,255,0.1);
+    /* box-shadow: inset 0px 1px 1px rgba(131, 131, 131, 0.5); */
+    width: 70%;
+    height: 10%;
+    border-bottom: 3px solid black;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+  }
+
+  #searchIconWrapper {
+      position: absolute;
+      top: 27%;
+      left: 77%;
+  }

@@ -6,13 +6,6 @@
     margin-right: 80px;
 }
 
-/* #dropdownMenus {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: 1000;
-} */
 
 .dropdown {
     cursor: pointer;
@@ -21,10 +14,12 @@
     padding: 2%;
 }
 
-.upArrow:hover  {
+/* ------ Arrow styling -------- */
+
+.upArrow  {
     position: absolute;
     left: 50%;
-    top: 40px;
+    top: 83%;
     width: 0; 
     height: 0; 
     border-left: 30px solid transparent;
@@ -34,28 +29,65 @@
 
 #cultureArrow {
     margin-left: -32px;
+    visibility: hidden;
 }
 
 #productArrow {
     margin-left: -30px;
+    visibility: hidden;
 }
 
 #howToArrow {
     margin-left: -30px;
+    visibility: hidden;
+
 }
 
 #recipeArrow {
     margin-left: -30px;
+    visibility: hidden;
 }
 
-.dropdown:hover .dropdownElements {
+/* dropdown triangle css ------------- */
+
+#recipeDropdown:hover .dropdownElements {
     visibility: visible;
 }
+
+#recipeDropdown:hover #recipeArrow {
+    visibility: visible;
+}
+
+#productDropdown:hover .dropdownElements {
+    visibility: visible;
+}
+
+#productDropdown:hover #productArrow {
+    visibility: visible;
+}
+
+#howToDropdown:hover .dropdownElements {
+    visibility: visible;
+}
+
+#howToDropdown:hover #howToArrow {
+    visibility: visible;
+}
+
+#cultureDropdown:hover .dropdownElements {
+    visibility: visible;
+}
+
+#cultureDropdown:hover #cultureArrow {
+    visibility: visible;
+}
+
+/* ------------------------------------ */
 
 .dropdownElements {
     background-color: rgb(48,162,204);
     position: absolute;
-    top: 48.5px;
+    top: 100%;
     color: white;
     text-align: left;
     font-family: Helvetica;
@@ -89,7 +121,7 @@
 }
 
 .dropdownSubElement:hover {
-    background-color: rgb(49, 74, 118);
+    background-color: #334268;
 }
 
 
@@ -134,6 +166,10 @@
 #profileIcon {
     width: 100%;
     height: auto;
+}
+
+#profileIcon:hover {
+    cursor:pointer;
 }
 
 #logoutDiv:hover {

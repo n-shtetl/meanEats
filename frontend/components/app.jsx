@@ -6,6 +6,7 @@ import PostIndexContainer from './posts/PostIndexContainer';
 import PostShowContainer from './posts/PostShowContainer';
 import { Route, Switch } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import Modal from './modal/modal';
 
 const App = () => (
   <div id="app">
@@ -16,6 +17,7 @@ const App = () => (
         {/* <GreetingContainer/> */}
         <Route path="/" component={GreetingContainer}/>
     </header>
+    <Modal />
     <Switch>
       <ProtectedRoute exact path="/" component={PostIndexContainer} />
       <ProtectedRoute exact path="/posts/:postId" component={PostShowContainer}/>

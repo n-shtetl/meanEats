@@ -10,6 +10,7 @@ const logoTitle = () => (
 )
 
 export const Greeting = (props) => {
+    
     const SessionLinks = () => {
         const loginLink = () => (
             <div id='loginLink'>
@@ -36,7 +37,7 @@ export const Greeting = (props) => {
             <Link to="/"><div id="mainIconWrapper"><img id="mainIcon" src="Serious_Eats_Logo.png" height="100" width="100"/></div></Link>
             </div>
             <nav id="mainNav">
-                    <div className="dropdown"><strong>Recipes</strong><div className="upArrow" id="recipeArrow"></div>
+                    <div className="dropdown" id="recipeDropdown"><strong>Recipes</strong><div className="upArrow" id="recipeArrow"></div>
                         <div className="dropdownElements" id="recipes">
                             <div className="dropdownElement">Browse By:
                                 <Link to="/tags/Ingredient"><div className="dropdownSubElement">Ingredient</div></Link>
@@ -46,7 +47,7 @@ export const Greeting = (props) => {
                             </div>
                         </div>
                     </div>
-                    <div className="dropdown"><strong>How-Tos</strong><div className="upArrow" id="howToArrow"></div>
+                    <div className="dropdown" id="howToDropdown"><strong>How-Tos</strong><div className="upArrow" id="howToArrow"></div>
                         <div className="dropdownElements" id="howTos">
                             <div className="dropdownElement">
                                 <div className="dropdownSubElement">Cooking Techniques</div>
@@ -57,7 +58,7 @@ export const Greeting = (props) => {
                             </div>
                         </div>
                     </div>
-                    <div className="dropdown"><strong>Product Recs</strong><div className="upArrow" id="productArrow"></div>
+                    <div className="dropdown" id="productDropdown"><strong>Product Recs</strong><div className="upArrow" id="productArrow"></div>
                         <div className="dropdownElements" id="productRecs">
                             <div className="dropdownElement">
                             <div className="dropdownSubElement">Equipment Reviews</div>
@@ -67,7 +68,7 @@ export const Greeting = (props) => {
                             </div> 
                         </div>
                     </div>
-                    <div className="dropdown"><strong>Culture</strong><div className="upArrow" id="cultureArrow"></div>
+                    <div className="dropdown" id="cultureDropdown"><strong>Culture</strong><div className="upArrow" id="cultureArrow"></div>
                         <div className="dropdownElements" id="culture">
                             <div className="dropdownElement">
                                 <div className="dropdownSubElement">Cuisine Guides</div>
@@ -78,21 +79,19 @@ export const Greeting = (props) => {
                         </div>
                     </div>
                     {/* <h4 id="greetingText">Welcome, {props.currentUser.username}</h4> */}
-                    <div id="profileDiv" onClick={props.logout}>
+                    <div id="profileDiv">
                         <img id="profileIcon" src="https://img.icons8.com/ios-filled/50/000000/user-female-circle.png"/>
                     </div>
-                    <div id="searchDiv">
+                    <div id="searchDiv" onClick={() => props.openModal('search')}>
                         <img id="searchIcon" src="https://img.icons8.com/pastel-glyph/64/000000/search--v2.png"/>
                     </div>
             </nav>
-            
         </div>
         <div id="bannerBar">
             <div id="progressBar"></div>
         </div>
         </div>
     )
-    console.log(props);
     return props.currentUser ? PersonalGreeting() : SessionLinks();
 }
 
@@ -117,8 +116,4 @@ $(window).scroll(function() {
             el.fadeIn();
         }, 450)
     }
-    // else {
-    //     $(".personalGreetingDiv").removeClass("collapse");
-    //     $(".personalGreetingDiv").prepend(<img id="mainIcon" src="cooking_pot.png" height="100" width="100"/>)
-    // }
 });
