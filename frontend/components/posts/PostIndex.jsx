@@ -1,5 +1,6 @@
 import React from 'react';
 import PostIndexItem from './PostIndexItem';
+import FeaturedPostsContainer from './FeaturedPostsContainer';
 
 class PostIndex extends React.Component {
     constructor(props) {
@@ -16,6 +17,7 @@ class PostIndex extends React.Component {
         const { postToTags } = this.props;
         return (
             <div>
+            <FeaturedPostsContainer />
             <div id="postIndex">
                 {posts.map((post) => (
                     <PostIndexItem post={post}

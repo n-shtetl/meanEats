@@ -40,10 +40,10 @@ export const Greeting = (props) => {
                     <div className="dropdown" id="recipeDropdown"><strong>Recipes</strong><div className="upArrow" id="recipeArrow"></div>
                         <div className="dropdownElements" id="recipes">
                             <div className="dropdownElement">Browse By:
-                                <Link to="/tags/Ingredient"><div className="dropdownSubElement">Ingredient</div></Link>
-                                <div className="dropdownSubElement">Cuisine</div>
-                                <div className="dropdownSubElement">Dish Type</div>
-                                <div className="dropdownSubElement">Cooking Method</div>
+                                <Link to="/tags/Ingredient"><div className="dropdownSubElement browseBy">Ingredient</div></Link>
+                                <div className="dropdownSubElement browseBy">Cuisine</div>
+                                <div className="dropdownSubElement browseBy">Dish Type</div>
+                                <div className="dropdownSubElement browseBy">Cooking Method</div>
                             </div>
                         </div>
                     </div>
@@ -62,9 +62,9 @@ export const Greeting = (props) => {
                         <div className="dropdownElements" id="productRecs">
                             <div className="dropdownElement">
                             <div className="dropdownSubElement">Equipment Reviews</div>
-                                <div className="dropdownSubElement">Taste Tests</div>
-                                <div className="dropdownSubElement">Buying Guides</div>
-                                <div className="dropdownSubElement">Editor's Picks</div>  
+                            <div className="dropdownSubElement">Taste Tests</div>
+                            <div className="dropdownSubElement">Buying Guides</div>
+                            <div className="dropdownSubElement">Editor's Picks</div>  
                             </div> 
                         </div>
                     </div>
