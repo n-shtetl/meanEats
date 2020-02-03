@@ -25,6 +25,7 @@ export const fetchTags = () => dispatch => {
 }
 
 export const fetchTag = tagId => dispatch => {
+    debugger
     return TagApiUtil.fetchTag(tagId)
         .then(tag => dispatch(receiveTag(tag)))
         .fail(errors => dispatch(receiveTagErrors(errors)))

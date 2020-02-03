@@ -1,5 +1,23 @@
 class Api::TagsController < ApplicationController 
 
+    def tree_data 
+        output = []
+        Tag.roots.each do |tag|
+            output << data(tag)
+        end
+        output.to_json
+    end
+
+    def data(tag)
+        subs = []
+        unless tag.subs.blank?
+            tag.subs.each do |sub|
+                subs << data(sub)
+            end
+        end
+        {tag_name: tag.tag, subs: subs}
+    end
+
     def create
         @tag = Tag.new(tag_params)
         if @tag.save
@@ -15,7 +33,8 @@ class Api::TagsController < ApplicationController
     end
 
     def index
-        @tags = Tag.all
+        @tags = Tag.find_by(tag: "Root")
+        @tags = data(@tags)
         render '/api/tags/index'
     end
 

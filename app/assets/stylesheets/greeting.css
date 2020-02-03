@@ -6,11 +6,15 @@
     margin-right: 80px;
 }
 
+html {
+    height: 100%;
+}
+
 
 .dropdown {
     cursor: pointer;
     position: relative;
-    font-size: 20px;
+    font-size: 115%;
     padding: 2%;
 }
 
@@ -99,7 +103,7 @@
 .dropdownElements {
     background-color: rgb(48,162,204);
     position: absolute;
-    top: 100%;
+    top: 52px;
     color: white;
     text-align: left;
     font-family: Helvetica;
@@ -175,6 +179,7 @@
     width: 100%;
     align-items: center;
     justify-content: space-between;
+    height: 50px;
 }
 
 
@@ -212,11 +217,7 @@
     width: 100% ;
 }
 
-#progressBar {
-    height: 3px;
-    width: 0%;
-    background-color: #000000;
-}
+
 
 #titleText {
     margin-left: 25px;
@@ -263,6 +264,7 @@
     background-color: #efefef;
     position: fixed;
     color: #383c45;
+    z-index: 1;
 }
 
 .collapse {

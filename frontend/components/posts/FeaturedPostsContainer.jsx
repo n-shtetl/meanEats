@@ -1,13 +1,15 @@
 import React from 'react';
-import { fetchPosts } from '../../actions/post_actions';
-import { fetchPostToTags } from '../../actions/post_to_tag_actions';
+import { fetchPost } from '../../actions/post_actions';
 import { connect } from 'react-redux';
+import FeaturedPosts from './FeaturedPosts';
 
 const mapStateToProps = state => ({
 
 })
 
 const mapDispatchToProps = dispatch => ({
-    fetchPosts: () => dispatch(fetchPosts()),
-    fetchPostToTags: () => dispatch(fetchPostToTags()),
+    
 })
+
+export default connect(mapStateToProps, mapDispatchToProps)(FeaturedPosts);
+

@@ -43,14 +43,12 @@ class PostShow extends React.Component {
     }
 
     handleScroll(e) {
-        console.log('the scroll things', e);
     }
 
     render() {
         if (!this.props.post) return null;
         const { body } = this.props.post;
         const bodyArr = body.split("\n")
-        console.log(this.props.post.directions);
         return (
             <div className='postShow'>
                 <h1 className='postShowTitle'>{this.props.post.title}</h1>

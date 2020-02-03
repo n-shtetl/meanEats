@@ -18,6 +18,7 @@ const App = () => (
         <Route path="/" component={GreetingContainer}/>
     </header>
     <Modal />
+    <div className="index-body">
     <Switch>
       <ProtectedRoute exact path="/" component={PostIndexContainer} />
       <ProtectedRoute exact path="/posts/:postId" component={PostShowContainer}/>
@@ -25,6 +26,7 @@ const App = () => (
     </Switch>
     <AuthRoute path="/login" component={LoginFormContainer} />
     <AuthRoute path="/signup" component={SignupFormContainer} />
+    </div>
   </div>
 );
 
