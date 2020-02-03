@@ -18,31 +18,37 @@ class PostIndex extends React.Component {
     }
 
     traverse(tags) {
-        let queue = [tags[0]];
+        let tagsInOrder = {};
+        let queue = [tags];
+        let i = 0;
         while (queue.length) {
             let shifted = queue.shift();
-            console.log(shifted.tag_name);
+            tagsInOrder[shifted.tag_name] = i++;
             if (shifted.subs) {
                 shifted.subs.forEach(sub => {
-                    sub.
                     queue.push(sub)
                 })
             }
         }
+        return tagsInOrder;
     }
 
     render() {
         const { posts } = this.props;
         const { postToTags } = this.props;
         const { tags } = this.props;
-        // console.log(posts);
-        // console.log(tags);
-        // if (tags.length) {
-        //     this.traverse(tags);
-        // }
-        // let tagTree = this.traverse(tag);
-        // console.log(tagTree);
-        // console.log(postToTags);
+        let tagIndex = {};
+        if (tags.length) {
+            let tagsArr = tags[1];
+            tagsArr.forEach(tag => {
+                tagIndex[tag.id] = tag.tag;
+            })
+        }
+        let tagsInOrder;
+        if (tags.length) {
+            tagsInOrder = this.traverse(tags[0])
+        }
+        
         let featuredPostIds = postToTags.filter(pTT => pTT.tag_id === 14).map(pTT => pTT.post_id);
         let featuredPosts = [];
         posts.forEach(function(post) {
@@ -66,16 +72,16 @@ class PostIndex extends React.Component {
             <div className="howToHeader">HOW-TOS</div>
             <div className="howToPosts">
                 {this.state.allHowTo ? 
-                    howToPosts.map((post, i) => i < 8 ? (
+                    howToPosts.map((post, i) => i < 8 ? ( 
                     <PostIndexItem post={post}
-                                    pTT={postToTags.filter(pTT => pTT.post_id === post.id)}
-                                    fetchTag={this.props.fetchTag}
+                                    tags={postToTags.filter(pTT => pTT.post_id === post.id).map(pTT => pTT.tag_id).map(id => tagIndex[id])}
+                                    tagsInOrder={tagsInOrder}
                                     key={post.id}/>
                     ) : null) :
                     howToPosts.map((post) => (
                         <PostIndexItem post={post}
-                                        pTT={postToTags.filter(pTT => pTT.post_id === post.id)}
-                                        fetchTag={this.props.fetchTag}
+                                        tags={postToTags.filter(pTT => pTT.post_id === post.id).map(pTT => pTT.tag_id).map(id => tagIndex[id])}
+                                        tagsInOrder={tagsInOrder}
                                         key={post.id}/>))
                 }
             </div>

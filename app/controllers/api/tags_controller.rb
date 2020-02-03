@@ -35,6 +35,7 @@ class Api::TagsController < ApplicationController
     def index
         @tags = Tag.find_by(tag: "Root")
         @tags = data(@tags)
+        @tagIndex = Tag.all.select(:id, :tag)
         render '/api/tags/index'
     end
 
