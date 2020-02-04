@@ -308,5 +308,100 @@ file29 = open('https://meaneats-seeds.s3-us-west-1.amazonaws.com/howto16.jpg')
 howTo16.photos.attach(io: file29, filename: 'img29')
 i += 1
 
+culture1 = Post.create(id: i, title: "Authenticity? These Filipino Chefs Aren’t Concerned",
+author_id: 26,
+kicker: "To make Filipino food thousands of miles from the archipelago, these chefs have adapted the cuisine.",
+body: "body")
+file30 = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/culture1.jpg")
+culture1.photos.attach(io: file30, filename: 'img30')
+i += 1
+
+culture2 = Post.create(id: i, title: "An Introduction to Korean Barbecue",
+author_id: 9,
+kicker: "From meats to banchan to drink, here's a guide to the components of a Korean-barbecue feast.",
+body: "body")
+file31 = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/culture2.jpg")
+culture1.photos.attach(io: file31, filename: 'img31')
+i += 1
+
+culture3 = Post.create(id: i, title: "Merry Black Day: Canoodling on Korea’s Anti-Valentine’s Holiday",
+author_id: 27,
+kicker: "In romance-obsessed South Korea, Black Day gives singles a chance to commiserate.",
+body: "body")
+file32 = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/culture3.jpg")
+culture3.photos.attach(io: file32, filename: 'img32')
+i += 1
+
+culture4 = Post.create(id: i, title: "From Trash to Treasure: The History of Barbecued Ribs",
+author_id: 28,
+kicker: "Far from being a delicacy that traces its roots to the antebellum South, barbecue ribs are a 20th century innovation.",
+body: "body")
+file33 = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/culture4.jpg")
+culture4.photos.attach(io: file33, filename: 'img33')
+i += 1
+
+culture5 = Post.create(id: i, title: "The Drink of the Gods: An Introduction to Pulque",
+author_id: 29,
+kicker: "The history of pulque is closely intertwined with the history of Mexico.",
+body: "body")
+file34 = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/culture5.jpg")
+culture5.photos.attach(io: file34, filename: 'img34')
+i += 1
+
+culture6 = Post.create(id: i, title: "Pickle Science: How to Master the Preserving Power of Acids",
+author_id: 30,
+kicker: "Everything you need to know about how to make lacto-fermented and vinegar-pickled cucumbers.",
+body: "body")
+file35 = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/culture6.jpg")
+culture6.photos.attach(io: file35, filename: 'img35')
+i += 1
+
+culture7 = Post.create(id: i, title: "Tomatoes, Acid, and Heat: The Science of Canning",
+author_id: 30,
+kicker: "Step-by-step instructions on how to make your own canned tomatoes.",
+body: "body")
+file36 = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/culture7.jpg")
+culture7.photos.attach(io: file36, filename: 'img36')
+i += 1
+
+culture8 = Post.create(id: i, title: "The Truth About MSG",
+author_id: 31,
+kicker: "What is MSG? Will it really give you a headache? Should you be cooking with it?",
+body: "body")
+file37 = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/culture8.jpg")
+culture8.photos.attach(io: file37, filename: 'img37')
+i += 1
+
+culture9 = Post.create(id: i, title: "The Hows and Whys of Blooming Coffee",
+author_id: 12,
+kicker: "To bloom, or not to bloom, that is the question.",
+body: "body")
+file38 = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/culture9.jpg")
+culture9.photos.attach(io: file38, filename: 'img38')
+i += 1
+
+culture10 = Post.create(id: i, title: "Sweet, Memory: On the Subtle Magic of the Cookie Jar",
+author_id: 32,
+kicker: "The cookie-jar mentality will never die",
+body: "body")
+file39 = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/culture10.jpg")
+culture10.photos.attach(io: file39, filename: 'img39')
+i += 1
+
+culture11 = Post.create(id: i, title: "The Calm Before the Swarm: A Day in the Life of an Urban Beekeeper",
+author_id: 33,
+kicker: "Urban beekeeping comes with unexpected responsibilities.",
+body: "body")
+file40 = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/culture11.jpg")
+culture11.photos.attach(io: file40, filename: 'img40')
+i += 1
+
+culture12 = Post.create(id: i, title: "The Comfort Food Diaries: My Coke Habit",
+author_id: 34,
+kicker: "Drinking coke formed the most potent sense memory of my childhood.",
+body: "body")
+file41 = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/culture12.jpg")
+culture12.photos.attach(io: file41, filename: 'img41')
+i += 1
 
 

@@ -14,7 +14,6 @@ class PostIndexItem extends React.Component {
     }
 
     render() {
-        console.log(this.props);
         let buttonTag;
         if(this.props.tagsInOrder) {
             let temp = this.props.tags.sort((tag1, tag2) => this.props.tagsInOrder[tag1]-this.props.tagsInOrder[tag2])
