@@ -321,7 +321,7 @@ author_id: 9,
 kicker: "From meats to banchan to drink, here's a guide to the components of a Korean-barbecue feast.",
 body: "body")
 file31 = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/culture2.jpg")
-culture1.photos.attach(io: file31, filename: 'img31')
+culture2.photos.attach(io: file31, filename: 'img31')
 i += 1
 
 culture3 = Post.create(id: i, title: "Merry Black Day: Canoodling on Korea’s Anti-Valentine’s Holiday",

@@ -16,7 +16,23 @@
     margin-left: 3%;
 }
 
+.culturePosts {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 3%;
+}
+
 .howToHeader {
+    display: block;
+    text-align: center;
+    margin-top: 6vh;
+    margin-bottom: 2vh;
+    font-size: 1.5em;
+    font-weight: 800;
+    color: rgb(48,162,204);
+}
+
+.cultureHeader {
     display: block;
     text-align: center;
     margin-top: 6vh;

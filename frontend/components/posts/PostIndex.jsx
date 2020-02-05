@@ -7,7 +7,7 @@ import { fetchPost } from '../../util/post_api_util';
 class PostIndex extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { allHowTo: false }
+        this.state = { allHowTo: false, allCulture: false }
         this.traverse = this.traverse.bind(this);
     }
 
@@ -64,7 +64,16 @@ class PostIndex extends React.Component {
                 howToPosts.push(post);
             }
         })
-    
+
+        let culturePostIds = this.props.postToTags.filter(pTT => pTT.tag_id === 13).map(pTT => pTT.post_id)
+        let culturePosts = [];
+        posts.forEach(function(post) {
+            if (culturePostIds.some(id => id === post.id)) {
+                culturePosts.push(post);
+            }
+        })
+        console.log(culturePosts);
+
         return (
             <div id="postIndexWrapper">
             <FeaturedPosts className="featuredPosts" fP={featuredPosts}/>
@@ -90,6 +99,28 @@ class PostIndex extends React.Component {
                     <div className="seeMoreBar"/>   
                 </div>
                 {this.state.allHowTo ? <div className="seeMoreText">See More Posts</div> : <div className="seeMoreText">See Less Posts</div>}
+            </div>
+            <div className="cultureHeader">СULTURE</div>
+            <div className="culturePosts">
+                {!this.state.allCulture ? 
+                    culturePosts.map((post, i) => i < 8 ? ( 
+                    <PostIndexItem post={post}
+                                    tags={postToTags.filter(pTT => pTT.post_id === post.id).map(pTT => pTT.tag_id).map(id => tagIndex[id])}
+                                    tagsInOrder={tagsInOrder}
+                                    key={post.id}/>
+                    ) : null) :
+                    culturePosts.map((post) => (
+                        <PostIndexItem post={post}
+                                        tags={postToTags.filter(pTT => pTT.post_id === post.id).map(pTT => pTT.tag_id).map(id => tagIndex[id])}
+                                        tagsInOrder={tagsInOrder}
+                                        key={post.id}/>))
+                }
+            </div>
+            <div className="seeMoreDiv" onClick={() => this.setState({allCulture: !this.state.allCulture})}>
+                <div className="seeMoreBarContainer">
+                    <div className="seeMoreBar"/>   
+                </div>
+                {!this.state.allCulture ? <div className="seeMoreText">See More Posts</div> : <div className="seeMoreText">See Less Posts</div>}
             </div>
             {/* <div id="postIndex">
                 {posts.map((post) => (
