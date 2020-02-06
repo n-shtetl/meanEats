@@ -43,6 +43,7 @@ a {
 }
 
 .buttonTag {
+    z-index: 0;
     text-shadow: none;
     border: 1px solid white;
     background-color: #30a2cc;

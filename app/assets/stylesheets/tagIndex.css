@@ -1,0 +1,10 @@
+.index-body {
+    display: flex;
+    margin-top: 18vh;
+    justify-content: center;
+}
+
+.tagHeader {
+    font-size: 2em;
+    
+}

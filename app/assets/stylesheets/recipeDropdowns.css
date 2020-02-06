@@ -61,6 +61,7 @@
 }
 
 .sub-dropdowns0 {
+    z-index: 1;
     width: 100.25%;
     margin-top: 5%;
     right: 0.5%;
@@ -72,7 +73,8 @@
     border-style: solid;
     border-color: rgb(191,191,191);
 }
-.sub-dropdowns1 {   
+.sub-dropdowns1 {  
+    z-index: 1;
     width: 100%;
     margin-top: 5%;
     right: 0.5%;
@@ -97,6 +99,7 @@
     border-color: rgb(191,191,191);
 }
 .sub-dropdowns3 {
+    z-index: 1
     width: 100.15%;
     right: 0.5%;
     margin-top: 5%;

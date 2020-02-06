@@ -126,6 +126,7 @@ file8 = open('https://meaneats-seeds.s3-us-west-1.amazonaws.com/crispy-roast-pot
 post8.photos.attach(io: file8, filename: 'img8')
 i += 1
 
+
 post9 = Post.create(id: i, title: "Get to Know Culantro, the Herb That's More Cilantro-y Than Cilantro",
 author_id: 1,
 kicker: "Like cilantro, but turned up to 11",
@@ -179,7 +180,7 @@ i += 1
 # post14.photos.attach(io: file14, filename: 'img14')
 # i += 1
 
-
+Author.create(id: 7, name: "Stella Parks")
 howTo1 = Post.create(id: i, title: "Icing on the Cake: A Guide to Basic Frosting Types",
 author_id: 7,
 kicker: "All the basic cake frostings and when to use them.",
@@ -188,6 +189,7 @@ file15 = open('https://meaneats-seeds.s3-us-west-1.amazonaws.com/howto1.jpg')
 howTo1.photos.attach(io: file15, filename: 'img15')
 i += 1
 
+Author.create(id: 7, name: "Stella Parks")
 howTo2 = Post.create(id: i, title: "Everything You Need To Know About Oat Milk",
 author_id: 8,
 kicker: "How oat milk is made, how to cook with it, and everything else you need to know.",
