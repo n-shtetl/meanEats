@@ -51,7 +51,7 @@ export const Greeting = (props) => {
                         <div className="dropdownElements" id="howTos">
                             <div className="dropdownElement">
                                 <div className="dropdownSubElement">Cooking Techniques</div>
-                                <Link to="tags/113"><div className="dropdownSubElement">Ingredient Guides</div></Link>
+                                <Link to="/tags/113"><div className="dropdownSubElement">Ingredient Guides</div></Link>
                                 <div className="dropdownSubElement">Equipment</div> 
                                 <div className="dropdownSubElement">Kitchen Tips</div> 
                                 <div className="dropdownSubElement">Entertaining</div> 
@@ -71,7 +71,7 @@ export const Greeting = (props) => {
                     <div className="dropdown" id="cultureDropdown"><strong>Culture</strong><div className="upArrow" id="cultureArrow"></div>
                         <div className="dropdownElements" id="culture">
                             <div className="dropdownElement">
-                                <div className="dropdownSubElement">Cuisine Guides</div>
+                                <Link to="/tags/115"><div className="dropdownSubElement">Cuisine Guides</div></Link>
                                 <div className="dropdownSubElement">Food History</div>
                                 <div className="dropdownSubElement">Food Science</div>
                                 <div className="dropdownSubElement">Personal Essays</div>

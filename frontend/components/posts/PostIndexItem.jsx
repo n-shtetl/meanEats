@@ -19,7 +19,7 @@ class PostIndexItem extends React.Component {
             let temp = this.props.tags.sort((tag1, tag2) => this.props.tagsInOrder[tag1]-this.props.tagsInOrder[tag2])
             buttonTag = temp.pop();
         }
-        
+
         return (
         <div id="postIndexItem">  
             <Link to={`/posts/${this.props.post.id}`} id>

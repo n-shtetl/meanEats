@@ -1,14 +1,22 @@
 .postShow {
     margin-top: 200px;
-    width: 90%;
+    width: 65%;
     background-color: rgb(255,255,255);
     margin: 0 auto;
     margin-top: 200px;
+    margin-left: 31px;
+    color: #3d414a;
 }
 
 .postShowTitle {
     text-align: center;
     padding-top: 20px;
+}
+
+.divider {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(239,239,239);
 }
 
 .postShowImageWrapper {
@@ -45,4 +53,117 @@
 
 .postShowDate {
     text-align: center;
+}
+
+.commentBox {
+    padding: 5%;
+}
+
+.greetingAndOpenOrClose {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6%;
+}
+
+.helloUsername {
+    font-weight: 100;
+    font-size: 0.9em;
+}
+
+.openOrClose {
+    color: #ff3600;
+    font-weight: 1000;
+    font-size: 1.1em;
+}
+
+.pageLinks {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 2%;
+    color: #ff3600;
+}
+
+.pageLinks:hover {
+    cursor:pointer;
+}
+
+.commentPagination {
+    margin-bottom: 4%
+}
+
+.pageLink {
+    padding-right: 4px;
+}
+
+.commentNumbers {
+    color: #3d414a;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.commentBody {
+    margin-bottom: 5%;
+}
+
+.usernameAndTimestamp {
+    margin-right: 25px;
+}
+
+.usernameTimeStampAndBody {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 25px;
+    padding-bottom: 53px;
+    border-bottom: solid 1px #d7d9db;
+}
+
+.commentUsername {
+    font-size: 0.8em;
+    margin-bottom: 5px;
+}
+
+.commentTimestamp {
+    font-size: 0.8em;
+}
+
+.addCommentContainer {
+    margin-top: 64px;
+    display: block;
+    text-align: center;
+}
+
+.addCommentHeader {
+    margin-bottom: 22px;
+    font-weight: 1000;
+    font-size: 1.3em;
+}
+
+.textField {
+    width: 70%;
+    height: 213px;
+    resize: none;
+    margin-bottom: 30px;
+}
+
+.textField:focus {
+    border: solid 1px #ff3600;
+}
+
+.postCommentButton {
+    padding-bottom: 2%;
+    padding-top: 2%;
+    color: #ff3600;
+    border: 2px solid #ff3600;
+    width:140px;
+    height: 18px;
+    font-size: 0.9em;
+    transition: background-color 0.25s;
+    margin: 0 auto;
+    font-weight: 1000;
+}
+
+.postCommentButton:hover {
+    cursor:pointer;
+    color: white;
+    background-color: #ff3600;
 }

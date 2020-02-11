@@ -15,7 +15,6 @@ class FeaturedPost extends React.Component {
         const primary = fP[0];
         const secondary = fP[1];
         const tertiary = fP[2];
-
         return ( 
             <div className="featured"> 
                 {fP.length > 0 ? (

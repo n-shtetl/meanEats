@@ -16,4 +16,9 @@ class Post < ApplicationRecord
     has_many :tags,
         through: :posttotags,
         source: :tag
+
+    has_many :comments,
+        primary_key: :id,
+        foreign_key: :post_id,
+        class_name: :Comment
 end

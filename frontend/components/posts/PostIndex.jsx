@@ -9,12 +9,17 @@ class PostIndex extends React.Component {
         super(props);
         this.state = { allHowTo: false, allCulture: false }
         this.traverse = this.traverse.bind(this);
+        this.props.fetchPosts();
+        this.props.fetchPostToTags();
+        this.props.fetchTags();
+        this.props.fetchComments();
     }
 
     componentDidMount() {
         this.props.fetchPosts();
         this.props.fetchPostToTags();
         this.props.fetchTags();
+        this.props.fetchComments();
     }
 
     traverse(tags) {
@@ -37,6 +42,7 @@ class PostIndex extends React.Component {
         const { posts } = this.props;
         const { postToTags } = this.props;
         const { tags } = this.props;
+        console.log(tags);
         let tagIndex = {};
         if (tags.length) {
             let tagsArr = tags[1];
@@ -48,6 +54,8 @@ class PostIndex extends React.Component {
         if (tags.length) {
             tagsInOrder = this.traverse(tags[0])
         }
+
+        
         
         let featuredPostIds = postToTags.filter(pTT => pTT.tag_id === 14).map(pTT => pTT.post_id);
         let featuredPosts = [];
@@ -72,7 +80,6 @@ class PostIndex extends React.Component {
                 culturePosts.push(post);
             }
         })
-        console.log(culturePosts);
 
         return (
             <div id="postIndexWrapper">

@@ -1,10 +1,23 @@
-.index-body {
+/* .index-body {
     display: flex;
     margin-top: 18vh;
     justify-content: center;
+} */
+.tagIndex {
+    display: block;
+    margin-top: 18vh;
+    text-align: center;
 }
 
 .tagHeader {
     font-size: 2em;
-    
+    display: block;
+    margin-bottom: 86px;
+    color: rgb(48,162,204);
+}
+
+.tagIndexPosts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }

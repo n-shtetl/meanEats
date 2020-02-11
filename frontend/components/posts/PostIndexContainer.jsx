@@ -5,6 +5,7 @@ import { fetchPostToTags } from '../../actions/post_to_tag_actions';
 import { connect } from 'react-redux';
 import { fetchTag } from '../../actions/tag_actions';
 import { fetchTags } from '../../actions/tag_actions';
+import { fetchComments } from '../../actions/comment_actions';
 import PostIndex from './PostIndex';
 
 
@@ -19,7 +20,8 @@ const mapDispatchToProps = dispatch => ({
     fetchPost: id => dispatch(fetchPost(id)),
     fetchPostToTags: () => dispatch(fetchPostToTags()),
     fetchTag: id => dispatch(fetchTag(id)),
-    fetchTags: () => dispatch(fetchTags())
+    fetchTags: () => dispatch(fetchTags()),
+    fetchComments: () => dispatch(fetchComments())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(PostIndex);
