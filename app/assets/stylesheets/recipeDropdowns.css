@@ -60,14 +60,16 @@
     border-color: #ff3700 transparent transparent transparent;
 }
 
+
+
 .sub-dropdowns0 {
     z-index: 1;
     width: 100.25%;
-    margin-top: 5%;
+    margin-top: 12px;
     right: 0.5%;
     background-color: white;
     max-height: 0;
-    overflow:hidden;
+    overflow-y: scroll;
     transition: max-height 0.5s ease-out; 
     border-width: 0px 1px 1px 1px;
     border-style: solid;
@@ -76,11 +78,11 @@
 .sub-dropdowns1 {  
     z-index: 1;
     width: 100%;
-    margin-top: 5%;
+    margin-top: 12px;
     right: 0.5%;
     background-color: white;
     max-height: 0;
-    overflow:hidden;
+    overflow-y:scroll;
     transition: max-height 0.2s ease-out; 
     border-width: 0px 1px 1px 1px;
     border-style: solid;
@@ -89,23 +91,23 @@
 .sub-dropdowns2 {
     width: 100.25%;
     right: 0.5%;
-    margin-top: 5%;
+    margin-top: 12px;
     background-color: white;
     max-height: 0;
-    overflow:hidden;
+    overflow-y:scroll;
     transition: max-height 0.5s ease-out; 
     border-width: 0px 1px 1px 1px;
     border-style: solid;
     border-color: rgb(191,191,191);
 }
 .sub-dropdowns3 {
-    z-index: 1
+    z-index: 1;
     width: 100.15%;
     right: 0.5%;
-    margin-top: 5%;
+    margin-top: 12px;
     background-color: white;
     max-height: 0;
-    overflow:hidden;
+    overflow-y:scroll;
     transition: max-height 0.5s ease-out; 
     border-width: 0px 1px 1px 1px;
     border-style: solid;

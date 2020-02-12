@@ -4,14 +4,14 @@ import { $CombinedState } from 'redux';
 const traverse = (tag, i) => {  
     if (tag.subs.length) {
         return (
-            <div className={`dropdown${i++}`}>
+            <ul className={`dropdown${i++}`}>
                 {tag.subs.map(sub => (
-                    <div className="sub-dropdown-element">
+                    <li className="sub-dropdown-element">
                         {sub.tag_name}
                         {traverse(sub, i)}
-                    </div>
+                    </li>
                 ))}
-            </div>
+            </ul>
         )
     } else {
         return null;
@@ -37,8 +37,9 @@ const display = (div) => {
     if (dropdown.css("maxHeight") !== "0px") {
         dropdown.css({"maxHeight": "0px"})
     } else {
-        dropdown.css({"maxHeight": dropdown.prop("scrollHeight")})
+        dropdown.css({"maxHeight": "300px"})
     }
+    // dropdown.prop("scrollHeight"
 }
 
 
