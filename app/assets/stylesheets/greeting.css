@@ -4,18 +4,30 @@
     width: 60%;
     align-items: center;
     margin-right: 80px;
+    height: 50px;
 }
 
 html {
     height: 100%;
 }
 
+.containerDropdown {
+    display: table;
+}
+
+.subElWrap {
+    margin-left: 10px;
+}
 
 .dropdown {
+    display: table-cell;
+    vertical-align: middle;
     cursor: pointer;
     position: relative;
     font-size: 115%;
-    padding: 2%;
+    padding: 0%;
+    height: 50px;
+
 }
 
 /* ------ Arrow styling -------- */
@@ -23,7 +35,7 @@ html {
 .upArrow  {
     position: absolute;
     left: 50%;
-    top: 83%;
+    top: 80%;
     width: 0; 
     height: 0; 
     border-left: 30px solid transparent;
@@ -57,7 +69,6 @@ html {
 }
 
 /* dropdown triangle css ------------- */
-
 #recipeDropdown:hover .dropdownElements {
     visibility: visible;
 }
@@ -103,7 +114,7 @@ html {
 .dropdownElements {
     background-color: rgb(48,162,204);
     position: absolute;
-    top: 52px;
+    top: 50px;
     color: white;
     text-align: left;
     font-family: Helvetica;
@@ -144,22 +155,34 @@ html {
 }
 
 .dropdownSubElement:hover {
-    background-color: rgb(27, 96, 121);
+    background-color:rgb(50, 133, 164);
 }
 
 
 .dropdownElement {
-    margin: 10px;
-    padding-right: 10px;
+    
+    margin-top: 10px;
     width: 100%;
     clear: both;
 }
 
 
 .dropdownSubElement {
-    margin-top: 5%;
-    margin-bottom: 5%;
-    width: 80%;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.flexDropdownElement {
+    margin-left: 7px;
+    
+}
+
+
+
+.browseBy {
+    
 }
 
 #loginLink {
@@ -211,10 +234,24 @@ html {
     height: 80%;
 }
 
-#bannerBar {
+.bannerBar {
     background-color: rgb(48,162,204);
     height: 2px;
     width: 100% ;
+    transition-property: background-color;
+    transition-duration: 2s;
+}
+
+.thickBar {
+    width: 100%;
+    height: 4px;
+    background-color: rgba(161, 187, 196, 0.5);
+}
+
+.progressBar {
+    height: 4px;
+    background-color: #30a2cc;
+    width: 0.5%; 
 }
 
 

@@ -85,14 +85,16 @@ class PostShow extends React.Component {
         )
     }
 
+    playVideo() {
+        
+    }
+
     renderComments() {
         let user;
         if (this.props.session) {
             user = this.props.users[this.props.session.id]
         }
-        console.log(this.props);
         const { comments } = this.props;
-        console.log(comments);
         if (comments === null || comments === undefined) {
             return null;
         }
@@ -194,8 +196,9 @@ class PostShow extends React.Component {
                 <h1 className='postShowTitle'>{this.props.post.title}</h1>
                 <h4 className="postShowDate">Published on: {this.props.post.created_at.slice(0,10)}</h4>
                 <div className="postShowImageWrapper">
-                    <img className='postShowImage' src={this.props.post.photoUrl}/>
+                    {this.props.post.video_url ? <video className="postShowImage" controls muted  autoplay="autoplay"><source id="video" src={this.props.post.video_url} type="video/mp4"></source></video> : <img className='postShowImage' src={this.props.post.photoUrl}/>}
                 </div>
+                {/* {this.playVideo()} */}
                 <div className="postShowBody">
                     {bodyArr.map(para => (
                         <div>

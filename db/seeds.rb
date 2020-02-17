@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+Comment.destroy_all
 User.destroy_all
 Post.destroy_all
 # Tag.destroy_all
@@ -180,7 +180,7 @@ i += 1
 # post14.photos.attach(io: file14, filename: 'img14')
 # i += 1
 
-Author.create(id: 7, name: "Stella Parks")
+
 howTo1 = Post.create(id: i, title: "Icing on the Cake: A Guide to Basic Frosting Types",
 author_id: 7,
 kicker: "All the basic cake frostings and when to use them.",
@@ -189,7 +189,6 @@ file15 = open('https://meaneats-seeds.s3-us-west-1.amazonaws.com/howto1.jpg')
 howTo1.photos.attach(io: file15, filename: 'img15')
 i += 1
 
-Author.create(id: 7, name: "Stella Parks")
 howTo2 = Post.create(id: i, title: "Everything You Need To Know About Oat Milk",
 author_id: 8,
 kicker: "How oat milk is made, how to cook with it, and everything else you need to know.",
@@ -406,4 +405,11 @@ file41 = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/culture12.jpg")
 culture12.photos.attach(io: file41, filename: 'img41')
 i += 1
 
+culture13 = Post.create(id: i, title: "title",
+author_id: 1,
+kicker: "kicker",
+body: "body")
+file42 = open("/Users/maxwellphillips/Desktop/a:A/Notes/aws/fuschia.mp4")
+culture13.video.attach(io: file42, filename: 'video1')
+i += 1
 

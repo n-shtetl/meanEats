@@ -8,6 +8,8 @@ class Post < ApplicationRecord
 
     has_many_attached :photos
 
+    has_one_attached :video
+
     has_many :posttotags,
         primary_key: :id,
         foreign_key: :post_id,
