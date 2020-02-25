@@ -201,7 +201,7 @@ howTo12.photos.attach(io: file25, filename: 'img25')
 i += 1
 
 howTo13 = Post.create(id: i, title: "Koji Prime Rib Breaks the Mold of Holiday Roasts",
-author_id: 1
+author_id: 1,
 kicker: "Make prime rib exciting again with the addition of funky, savory shio koji.",
 body: "body")
 file26 = open('https://meaneats-seeds.s3-us-west-1.amazonaws.com/howto13.jpg')
@@ -209,7 +209,7 @@ howTo13.photos.attach(io: file26, filename: 'img26')
 i += 1
 
 howTo14 = Post.create(id: i, title: "Top Your Yule Log With These Super-Realistic Meringue Mushrooms",
-author_id: 1
+author_id: 1,
 kicker: "These meringue mushrooms taste as good as they look!",
 body: "body")
 file27 = open('https://meaneats-seeds.s3-us-west-1.amazonaws.com/howto14.jpg')
@@ -217,7 +217,7 @@ howTo14.photos.attach(io: file27, filename: 'img27')
 i += 1
 
 howTo15 = Post.create(id: i, title: "Shio Koji: A Fermented Moldy-Rice Marinade That Makes Food Taste Great",
-author_id: 1
+author_id: 1,
 kicker: "The same ingredient that gives us miso, soy sauce, and sake is also the key to this versatile marinade.",
 body: "body")
 file28 = open('https://meaneats-seeds.s3-us-west-1.amazonaws.com/howto15.jpg')
@@ -241,7 +241,7 @@ culture1.photos.attach(io: file30, filename: 'img30')
 i += 1
 
 culture2 = Post.create(id: i, title: "An Introduction to Korean Barbecue",
-author_id: 1
+author_id: 1,
 kicker: "From meats to banchan to drink, here's a guide to the components of a Korean-barbecue feast.",
 body: "body")
 file31 = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/culture2.jpg")
