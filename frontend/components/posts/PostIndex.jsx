@@ -56,7 +56,7 @@ class PostIndex extends React.Component {
             tagsInOrder = this.traverse(tags[0])
         }
         
-        let featuredPostIds = postToTags.filter(pTT => pTT.tag_id === 14).map(pTT => pTT.post_id);
+        let featuredPostIds = postToTags.filter(pTT => pTT.tag_id === 18).map(pTT => pTT.post_id);
         let featuredPosts = [];
         posts.forEach(function(post) {
             if (featuredPostIds.some(id => id === post.id)) {
@@ -64,7 +64,7 @@ class PostIndex extends React.Component {
             }      
         })
 
-        let howToPostIds = this.props.postToTags.filter(pTT => pTT.tag_id === 12).map(pTT => pTT.post_id);
+        let howToPostIds = this.props.postToTags.filter(pTT => pTT.tag_id === 3).map(pTT => pTT.post_id);
         let howToPosts = [];
         posts.forEach(function(post) {
             if (howToPostIds.some(id => id === post.id)) {
@@ -72,7 +72,7 @@ class PostIndex extends React.Component {
             }
         })
 
-        let culturePostIds = this.props.postToTags.filter(pTT => pTT.tag_id === 13).map(pTT => pTT.post_id)
+        let culturePostIds = this.props.postToTags.filter(pTT => pTT.tag_id === 4).map(pTT => pTT.post_id)
         let culturePosts = [];
         posts.forEach(function(post) {
             if (culturePostIds.some(id => id === post.id)) {

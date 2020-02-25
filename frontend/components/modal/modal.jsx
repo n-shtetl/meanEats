@@ -25,7 +25,7 @@ class Modal extends React.Component {
         return regex.test(post.title)
       })
       console.log(newPosts);
-      
+      return searchTerm;
     }
 
     componentDidUpdate() {
@@ -39,9 +39,9 @@ class Modal extends React.Component {
             return (
                 <div className="modal-background" onClick={this.props.closeModal}>
                   <input ref={this.setTextInputRef} id="searchBar" type="text" className="modal-child" placeholder="Type to search..." onClick={e => e.stopPropagation()}/>
-                  <div id="searchIconWrapper" onClick={this.searchRegex}>
+                  <Link to={`/search/${this.searchRegex}`}><div id="searchIconWrapper" onClick={this.searchRegex}>
                         <img id="searchIcon" src="https://img.icons8.com/pastel-glyph/64/000000/search--v2.png"/>
-                  </div>
+                  </div></Link> 
                 </div>
             )
         }   

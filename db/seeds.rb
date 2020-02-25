@@ -231,7 +231,7 @@ Tag.create(id: 104, tag: "Frosting", parent_id: 103)
 puts "Tags Created"
 
 
-sho = Author.create(id: 1, name: "Sho Spaeth")
+sho = Author.create(id: 1, name: "Sho Spaeth", title: "Features Editor", bio: "Sho lives in New York. His favorite foods, in order, are ramen, pho, clams, salted meats, and salted fish.")
 shoPhoto = open('https://meaneats-seeds.s3-us-west-1.amazonaws.com/Authors/sho1.jpg')
 sho.photos.attach(io: shoPhoto, filename: 'shoPhoto')
 

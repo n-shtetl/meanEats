@@ -45,8 +45,7 @@ const display = (div) => {
 
 const RecipeDropdowns = (props) => {
     if (props.tags.length) {
-        debugger
-        const recipes = props.tags[0].subs[1];
+        const recipes = props.tags[0].subs[0];
         return (
             <div className="outermost-recipe-dropdown-div">
             <div className="explore-div">Explore Recipes By</div>
