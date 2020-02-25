@@ -10,6 +10,8 @@
       resources :tags, only: [:create, :destroy, :index, :show]
       resources :post_to_tags, only: [:index, :show, :create, :destroy]
       resources :comments, only: [:index, :create]
+      resources :steps, only: [:show]
+      resources :authors, only: [:index]
     end
 
   end

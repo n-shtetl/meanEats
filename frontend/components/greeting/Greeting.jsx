@@ -66,10 +66,18 @@ export const Greeting = (props) => {
                     <div className="dropdown" id="productDropdown"><strong>Product Recs</strong><div className="upArrow" id="productArrow"></div>
                         <div className="dropdownElements" id="productRecs">
                             <div className="dropdownElement">
-                            <div className="dropdownSubElement">Equipment Reviews</div>
-                            <div className="dropdownSubElement">Taste Tests</div>
-                            <div className="dropdownSubElement">Buying Guides</div>
-                            <div className="dropdownSubElement">Editor's Picks</div>  
+                            <div className="dropdownSubElement"><div className="flexDropdownElement">
+                                Equipment Reviews
+                            </div></div>
+                            <div className="dropdownSubElement"><div className="flexDropdownElement">
+                                Taste Tests
+                            </div></div>
+                            <div className="dropdownSubElement"><div className="flexDropdownElement">
+                                Buying Guides
+                            </div></div>
+                            <div className="dropdownSubElement"><div className="flexDropdownElement">
+                                Editor's Picks
+                            </div></div>  
                             </div> 
                         </div>
                     </div>
@@ -78,10 +86,18 @@ export const Greeting = (props) => {
                     <div className="dropdown" id="cultureDropdown"><strong>Culture</strong><div className="upArrow" id="cultureArrow"></div>
                         <div className="dropdownElements" id="culture">
                             <div className="dropdownElement">
-                                <Link to="/tags/115"><div className="dropdownSubElement">Cuisine Guides</div></Link>
-                                <div className="dropdownSubElement">Food History</div>
-                                <div className="dropdownSubElement">Food Science</div>
-                                <div className="dropdownSubElement">Personal Essays</div>
+                                <Link to="/tags/115"><div className="dropdownSubElement"><div className="flexDropdownElement">
+                                    Cuisine Guides
+                                </div></div></Link>
+                                <div className="dropdownSubElement"><div className="flexDropdownElement">
+                                    Food History
+                                </div></div>
+                                <div className="dropdownSubElement"><div className="flexDropdownElement">
+                                    Food Science
+                                </div></div>
+                                <div className="dropdownSubElement"><div className="flexDropdownElement">
+                                    Personal Essays
+                                </div></div>
                             </div>
                         </div>
                     </div>

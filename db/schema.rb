@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_11_084407) do
+ActiveRecord::Schema.define(version: 2020_02_24_063623) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(version: 2020_02_11_084407) do
     t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "title"
+    t.text "bio"
   end
 
   create_table "comments", force: :cascade do |t|
@@ -64,6 +66,23 @@ ActiveRecord::Schema.define(version: 2020_02_11_084407) do
     t.string "kicker"
     t.text "ingredients"
     t.text "directions"
+    t.text "recipe_body"
+    t.text "why_it_works"
+    t.string "yield"
+    t.string "active_time"
+    t.string "total_time"
+    t.integer "rated"
+    t.text "special_equipment"
+    t.text "notes"
+  end
+
+  create_table "steps", force: :cascade do |t|
+    t.string "title"
+    t.text "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "post_id"
+    t.index ["post_id"], name: "index_steps_on_post_id"
   end
 
   create_table "tags", force: :cascade do |t|

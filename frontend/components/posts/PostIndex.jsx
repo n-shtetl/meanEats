@@ -50,12 +50,11 @@ class PostIndex extends React.Component {
                 tagIndex[tag.id] = tag.tag;
             })
         }
+        console.log(tagIndex);
         let tagsInOrder;
         if (tags.length) {
             tagsInOrder = this.traverse(tags[0])
         }
-
-        
         
         let featuredPostIds = postToTags.filter(pTT => pTT.tag_id === 14).map(pTT => pTT.post_id);
         let featuredPosts = [];
@@ -80,7 +79,7 @@ class PostIndex extends React.Component {
                 culturePosts.push(post);
             }
         })
-
+        console.log(this.props);
         return (
             <div id="postIndexWrapper">
             <FeaturedPosts className="featuredPosts" fP={featuredPosts}/>
