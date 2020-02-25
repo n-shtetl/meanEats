@@ -29,9 +29,9 @@ mirandaKaplan.photos.attach(io: mirandaPhoto, filename: 'mirandaPhoto')
 
 puts "authors created"
 
-video1 = open('/Users/maxwellphillips/Desktop/a:A/Notes/aws/fuschia.mp4')
-video2 = open('/Users/maxwellphillips/Desktop/a:A/Notes/aws/lomosaltado.mp4')
-video3 = open('/Users/maxwellphillips/Desktop/a:A/Notes/aws/emulsion.mp4')
+video1 = open('https://meaneats-seeds.s3-us-west-1.amazonaws.com/videos/emulsion.mp4')
+video2 = open('https://meaneats-seeds.s3-us-west-1.amazonaws.com/videos/fuschia.mp4')
+video3 = open('https://meaneats-seeds.s3-us-west-1.amazonaws.com/videos/lomosaltado.mp4')
 
 puts "videos opened"
 
