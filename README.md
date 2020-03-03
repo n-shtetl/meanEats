@@ -1,2 +1,2 @@
 # Mean Eats
-[Live Site](meaneats.herokuapp.com)
+[Live Site](wwww.meaneats.herokuapp.com)
