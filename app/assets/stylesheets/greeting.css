@@ -64,9 +64,12 @@ html {
     visibility: hidden;
 }
 
-#profileArrow {
+#profileUpArrow {
+    margin-left: -33px;
+    top: 40px;
     visibility: hidden;
 }
+
 
 /* dropdown triangle css ------------- */
 #recipeDropdown:hover .dropdownElements {
@@ -101,12 +104,25 @@ html {
     visibility: visible;
 }
 
-#profileIcon:hover + div {
+/* #profileIcon:hover + div {
     visibility: visible;
 }
 
-#profileIcon:hover + #profileArrow {
+#profileIcon:hover ~ #profileUpArrow {
     visibility: visible;
+}
+
+#profileIcon:hover .profileDiv {
+    visibility: visible;
+} */
+
+#profileDiv:hover div {
+    visibility: visible;
+}
+
+.profileDropdownElement:hover .profileDropdownInter {
+    background-color: rgb(50, 133, 164);
+    cursor: pointer;
 }
 
 /* ------------------------------------ */
@@ -214,6 +230,7 @@ html {
 #profileIcon {
     width: 100%;
     height: auto;
+    padding: 0%;
 }
 
 #profileIcon:hover {
@@ -227,6 +244,7 @@ html {
 #profileDiv {
     max-width: 50px;
     max-height: 50px;
+    position: relative;
 }
 
 #profileIcon {
@@ -308,3 +326,42 @@ html {
     height: 50px;
 }
 
+.profileDropdown {
+    width: 120px;
+    background-color: rgb(48,162,204);
+    position: absolute;
+    left: 50%;
+    margin-left: -60px;
+    top: 47px;
+    visibility: hidden;
+}
+
+.profileDropdownElement {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.profileDropdownSubElement {
+    margin-left: 5px;
+    font-weight: 100;
+    font-family: Helvetica;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.profileDropdownInter {
+    background-color: rgb(48,162,204);
+    width: 100%;
+    height: 35px;
+}
+
+.loginPage {
+    margin-top: 100px;
+}
+
+.signUpHere:hover {
+    color: rgb(48,162,204);
+}

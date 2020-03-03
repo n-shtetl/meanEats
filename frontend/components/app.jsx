@@ -5,6 +5,7 @@ import GreetingContainer from './greeting/GreetingContainer';
 import PostIndexContainer from './posts/PostIndexContainer';
 import PostShowContainer from './posts/PostShowContainer';
 import TagIndexContainer from './tags/TagIndexContainer';
+import SearchContainer from './search/SearchContainer';
 import { Route, Switch } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Modal from './modal/modal';
@@ -25,6 +26,7 @@ const App = () => (
       <ProtectedRoute exact path="/posts/:postId" component={PostShowContainer}/>
       <ProtectedRoute exact path="/tags/:tagId" component={TagIndexContainer}/>
       {/* <ProtectedRoute exact path="/tags/:tagName" component={TagIndexContainer}/> */}
+      <ProtectedRoute exact path="/search/:searchTerm" component={SearchContainer}/>
     </Switch>
     <AuthRoute path="/login" component={LoginFormContainer} />
     <AuthRoute path="/signup" component={SignupFormContainer} />

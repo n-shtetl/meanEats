@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const logoTitle = () => (
-    <div>
-    <img src="cooking_pot.png" height="100" width="100"/>
+    <div className="loginPage">
+    <img src="cookbook.png" height="100" width="100"/>
     <br/>
     <h2 id='title-text'>Mean Eats</h2>
     </div>
@@ -16,7 +16,7 @@ export const Greeting = (props) => {
             <div id='loginLink'>
             {logoTitle()}
             <p id='loginLinkPara'>Already a user? Login&nbsp;
-                <Link to="/login">here</Link>
+                <Link className="signUpHere" to="/login">here</Link>
             </p>
             </div>
         )
@@ -24,7 +24,7 @@ export const Greeting = (props) => {
             <div id='signupLink'>
             {logoTitle()}
             <p id='signupLinkPara'>Need an account? Sign up&nbsp;
-                <Link to="/signup">here</Link>
+                <Link className="signUpHere" to="/signup">here</Link>
             </p>
             </div>
         )
@@ -41,28 +41,28 @@ export const Greeting = (props) => {
                     <div className="dropdown" id="recipeDropdown"><strong>Recipes</strong><div className="upArrow" id="recipeArrow"></div>
                         <div className="dropdownElements" id="recipes">
                             {/* <div className="dropdownElement">Browse By: */}
-                                <Link to="/tags/"><div className="dropdownSubElement browseBy"><div className="flexDropdownElement">Ingredient</div></div></Link>
-                                <div className="dropdownSubElement browseBy"><div className="flexDropdownElement">Cuisine</div></div>
-                                <div className="dropdownSubElement browseBy"><div className="flexDropdownElement">Dish Type</div></div>
-                                <div className="dropdownSubElement browseBy"><div className="flexDropdownElement">Cooking Method</div></div>
+                                <Link to={`/tags/10`}><div className="dropdownSubElement browseBy"><div className="flexDropdownElement">Ingredient</div></div></Link>
+                                <Link to={`/tags/11`}><div className="dropdownSubElement browseBy"><div className="flexDropdownElement">Cuisine</div></div></Link>
+                                <Link to={`/tags/12`}><div className="dropdownSubElement browseBy"><div className="flexDropdownElement">Dish Type</div></div></Link>
+                                <Link to={`/tags/13`}><div className="dropdownSubElement browseBy"><div className="flexDropdownElement">Cooking Method</div></div></Link>
                             {/* </div> */}
                         </div>
                     </div>
                  </div>
                  <div className="containerDropdown">
-                    <div className="dropdown" id="howToDropdown"><strong>How-Tos</strong><div className="upArrow" id="howToArrow"></div>
+                    <div className="dropdown" id="howToDropdown"><strong>How-To's</strong><div className="upArrow" id="howToArrow"></div>
                         <div className="dropdownElements" id="howTos">
                             <div className="dropdownElement">
-                                <div className="dropdownSubElement"><div className="flexDropdownElement">Cooking Techniques</div></div>
-                                <Link to="/tags/113"><div className="dropdownSubElement"><div className="flexDropdownElement">Ingredient Guides</div></div></Link>
-                                <div className="dropdownSubElement"><div className="flexDropdownElement">Equipment</div></div> 
-                                <div className="dropdownSubElement"><div className="flexDropdownElement">Kitchen Tips</div></div> 
-                                <div className="dropdownSubElement"><div className="flexDropdownElement">Entertaining</div></div> 
+                            <Link to="/tags/108"><div className="dropdownSubElement"><div className="flexDropdownElement">Cooking Techniques</div></div></Link>
+                                <Link to="/tags/103"><div className="dropdownSubElement"><div className="flexDropdownElement">Ingredient Guides</div></div></Link>
+                                <Link to="/tags/105"><div className="dropdownSubElement"><div className="flexDropdownElement">Equipment</div></div></Link> 
+                                <Link to="/tags/107"><div className="dropdownSubElement"><div className="flexDropdownElement">Kitchen Tips</div></div></Link> 
+                                <Link to="/tags/106"><div className="dropdownSubElement"><div className="flexDropdownElement">Entertaining</div></div></Link> 
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="containerDropdown">
+                {/* <div className="containerDropdown">
                     <div className="dropdown" id="productDropdown"><strong>Product Recs</strong><div className="upArrow" id="productArrow"></div>
                         <div className="dropdownElements" id="productRecs">
                             <div className="dropdownElement">
@@ -81,23 +81,23 @@ export const Greeting = (props) => {
                             </div> 
                         </div>
                     </div>
-                </div>
+                </div> */}
                 <div className="containerDropdown">
                     <div className="dropdown" id="cultureDropdown"><strong>Culture</strong><div className="upArrow" id="cultureArrow"></div>
                         <div className="dropdownElements" id="culture">
                             <div className="dropdownElement">
-                                <Link to="/tags/115"><div className="dropdownSubElement"><div className="flexDropdownElement">
+                                <Link to="/tags/6"><div className="dropdownSubElement"><div className="flexDropdownElement">
                                     Cuisine Guides
                                 </div></div></Link>
-                                <div className="dropdownSubElement"><div className="flexDropdownElement">
+                                <Link to="/tags/7"><div className="dropdownSubElement"><div className="flexDropdownElement">
                                     Food History
-                                </div></div>
-                                <div className="dropdownSubElement"><div className="flexDropdownElement">
+                                </div></div></Link>
+                                <Link to="/tags/8"><div className="dropdownSubElement"><div className="flexDropdownElement">
                                     Food Science
-                                </div></div>
-                                <div className="dropdownSubElement"><div className="flexDropdownElement">
+                                </div></div></Link>
+                                <Link to="/tags/9"><div className="dropdownSubElement"><div className="flexDropdownElement">
                                     Personal Essays
-                                </div></div>
+                                </div></div></Link>
                             </div>
                         </div>
                     </div>
@@ -105,6 +105,10 @@ export const Greeting = (props) => {
                     {/* <h4 id="greetingText">Welcome, {props.currentUser.username}</h4> */}
                     <div id="profileDiv">
                         <img id="profileIcon" src="https://img.icons8.com/ios-filled/50/000000/user-female-circle.png"/>
+                        <div className="profileDropdown">
+                            <div className="profileDropdownElement"><div className="profileDropdownInter" onClick={props.logout}><div className="profileDropdownSubElement">Log Out</div></div></div>
+                        </div>
+                        <div id="profileUpArrow" className="upArrow"></div>
                     </div>
                     <div id="searchDiv" onClick={() => props.openModal('search')}>
                         <img id="searchIcon" src="https://img.icons8.com/pastel-glyph/64/000000/search--v2.png"/>
