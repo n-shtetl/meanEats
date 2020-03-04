@@ -5,6 +5,15 @@ class TagIndex extends React.Component {
     constructor(props) {
         super(props);
         this.traverse = this.traverse.bind(this);
+        this.swap = this.swap.bind(this);
+    }
+
+    swap(json) {
+        var ret = {};
+        for(var key in json){
+          ret[json[key]] = key;
+        }
+        return ret;
     }
 
     componentDidMount() {
@@ -32,7 +41,6 @@ class TagIndex extends React.Component {
 
     render() {
         let tagHeader;
-        console.log(this.props);
         if (this.props.tags.tagIndex) {
             this.props.tags.tagIndex.forEach(tag => {
                 if (tag.id === this.props.tagId) {
@@ -40,7 +48,6 @@ class TagIndex extends React.Component {
                 }
             })
         }
-    
         let tagIndex = {};
         if (this.props.tags.tagIndex) {
             let tagsArr = this.props.tags.tagIndex;
@@ -48,13 +55,11 @@ class TagIndex extends React.Component {
                 tagIndex[tag.id] = tag.tag;
             })
         }
-        console.log(this.props.tags);
         
         let tagsInOrder;
         if (this.props.tags.tags) {
             tagsInOrder = this.traverse(this.props.tags.tags);
         }
-        console.log(tagsInOrder);
 
         let postIds;
         let posts;
@@ -62,7 +67,6 @@ class TagIndex extends React.Component {
             postIds = Object.values(this.props.pTT).filter(pTT => pTT.tag_id === this.props.tagId).map(pTT => pTT.post_id);
             posts = this.props.posts.filter(post => postIds.includes(post.id))
         }
-        console.log(posts);
 
         // console.log(postToTag, "this works");
         return (
@@ -76,6 +80,7 @@ class TagIndex extends React.Component {
                     <PostIndexItem post={post}
                                     tags={Object.values(this.props.pTT).filter(pTT => pTT.post_id === post.id).map(pTT => pTT.tag_id).map(id => tagIndex[id])}
                                     tagsInOrder={tagsInOrder}
+                                    tagIndex={this.swap(tagIndex)}
                                     key={post.id}
                                     />
                     )

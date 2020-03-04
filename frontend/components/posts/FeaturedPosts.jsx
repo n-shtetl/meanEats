@@ -23,9 +23,9 @@ class FeaturedPost extends React.Component {
                         <Link to={`/posts/${primary.id}`}>
                             <img src={primary.photoUrl}/>
                             <div className="primaryFeaturedTextContainer">
-                                <div id="primary-tag" className="tag-box">
+                                <Link to="/tags/2"><div id="primary-tag" className="tag-box">
                                     Recipes
-                                </div>
+                                </div></Link>
                                 <div>
                                     {primary.title}
                                 </div>
@@ -37,9 +37,9 @@ class FeaturedPost extends React.Component {
                         <Link to={`/posts/${secondary.id}`}>
                             <img src={secondary.photoUrl}/>
                             <div className="secondaryFeaturedTextContainer">
-                                <div id="secondary-tag" className="tag-box">
+                                <Link to="/tags/3"><div id="secondary-tag" className="tag-box">
                                     How-To
-                                </div>
+                                </div></Link>
                                 <div>
                                     {secondary.title}
                                 </div>
@@ -50,9 +50,9 @@ class FeaturedPost extends React.Component {
                         <Link to={`/posts/${tertiary.id}`}>
                             <img src={tertiary.photoUrl}/>
                             <div className="tertiaryFeaturedTextContainer">
-                                <div id="tertiary-tag" className="tag-box">
+                                <Link to="/tags/4"><div id="tertiary-tag" className="tag-box">
                                     Culture
-                                </div>
+                                </div></Link>
                                 <div>
                                     {tertiary.title}
                                 </div>

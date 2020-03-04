@@ -19,6 +19,8 @@ class PostIndexItem extends React.Component {
             let temp = this.props.tags.sort((tag1, tag2) => this.props.tagsInOrder[tag1]-this.props.tagsInOrder[tag2])
             buttonTag = temp.pop();
         }
+        console.log(this.props, "here i am");
+        console.log(this.props.tagIndex[buttonTag], "here i also am")
 
         return (
         <div id="postIndexItem">  
@@ -27,7 +29,7 @@ class PostIndexItem extends React.Component {
                 <div id="postIndexItemTextContainer">
                     <div id="titleText">
                    {this.props.post.title}
-                   <div className="buttonTag">{buttonTag}</div>
+                   <Link to={`/tags/${this.props.tagIndex[buttonTag]}`}><div className="buttonTag">{buttonTag}</div></Link>
                    </div>
                    <div id="postIndexItemKicker">
                     {this.props.post.kicker}

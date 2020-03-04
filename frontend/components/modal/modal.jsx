@@ -56,7 +56,7 @@ class Modal extends React.Component {
         } else if (this.props.modal === 'search' && !this.state.submitted) {
             return (
                 <div className="modal-background" onClick={this.props.closeModal}>
-                  <input value={this.state.searchBar} onChange={this.update('searchBar')} ref={this.setTextInputRef} id="searchBar" type="text" className="modal-child" placeholder="Type to search..." onClick={e => e.stopPropagation()} onKeyPress={this.handleKeyPress}/>
+                  <input autocomplete="off"   value={this.state.searchBar} onChange={this.update('searchBar')} ref={this.setTextInputRef} id="searchBar" type="text" className="modal-child" placeholder="Type to search..." onClick={e => e.stopPropagation()} onKeyPress={this.handleKeyPress}/>
                   <div id="searchIconWrapper">
                     <img id="searchIcon" src="https://img.icons8.com/pastel-glyph/64/000000/search--v2.png"/>
                   </div>

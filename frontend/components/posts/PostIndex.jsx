@@ -13,6 +13,15 @@ class PostIndex extends React.Component {
         this.props.fetchPostToTags();
         this.props.fetchTags();
         this.props.fetchComments();
+        this.swap = this.swap.bind(this);
+    }
+
+    swap(json) {
+        var ret = {};
+        for(var key in json){
+          ret[json[key]] = key;
+        }
+        return ret;
     }
 
     componentDidMount() {
@@ -42,7 +51,7 @@ class PostIndex extends React.Component {
         const { posts } = this.props;
         const { postToTags } = this.props;
         const { tags } = this.props;
-        console.log(tags);
+        // console.log(tags, "tags");
         let tagIndex = {};
         if (tags.length) {
             let tagsArr = tags[1];
@@ -50,7 +59,7 @@ class PostIndex extends React.Component {
                 tagIndex[tag.id] = tag.tag;
             })
         }
-        console.log(tagIndex);
+        console.log(tagIndex), "tagIndex";
         let tagsInOrder;
         if (tags.length) {
             tagsInOrder = this.traverse(tags[0])
@@ -79,7 +88,7 @@ class PostIndex extends React.Component {
                 culturePosts.push(post);
             }
         })
-        console.log(this.props);
+        // console.log(this.props);
         return (
             <div id="postIndexWrapper">
             <FeaturedPosts className="featuredPosts" fP={featuredPosts}/>
@@ -91,12 +100,14 @@ class PostIndex extends React.Component {
                     <PostIndexItem post={post}
                                     tags={postToTags.filter(pTT => pTT.post_id === post.id).map(pTT => pTT.tag_id).map(id => tagIndex[id])}
                                     tagsInOrder={tagsInOrder}
+                                    tagIndex={this.swap(tagIndex)}
                                     key={post.id}/>
                     ) : null) :
                     howToPosts.map((post) => (
                         <PostIndexItem post={post}
                                         tags={postToTags.filter(pTT => pTT.post_id === post.id).map(pTT => pTT.tag_id).map(id => tagIndex[id])}
                                         tagsInOrder={tagsInOrder}
+                                        tagIndex={this.swap(tagIndex)}
                                         key={post.id}/>))
                 }
             </div>
@@ -113,12 +124,14 @@ class PostIndex extends React.Component {
                     <PostIndexItem post={post}
                                     tags={postToTags.filter(pTT => pTT.post_id === post.id).map(pTT => pTT.tag_id).map(id => tagIndex[id])}
                                     tagsInOrder={tagsInOrder}
+                                    tagIndex={this.swap(tagIndex)}
                                     key={post.id}/>
                     ) : null) :
                     culturePosts.map((post) => (
                         <PostIndexItem post={post}
                                         tags={postToTags.filter(pTT => pTT.post_id === post.id).map(pTT => pTT.tag_id).map(id => tagIndex[id])}
                                         tagsInOrder={tagsInOrder}
+                                        tagIndex={this.swap(tagIndex)}
                                         key={post.id}/>))
                 }
             </div>
