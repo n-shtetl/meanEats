@@ -12,4 +12,7 @@ Mean Eats is a pixel-perfect tribute to the Serious Eats website with a more inv
 - S3
 - CSS 
 - Heroku
+# Features
+## Tag System
 
+Navigation on the meanEats website is almost entirely achieved by tags. 
