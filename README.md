@@ -99,3 +99,23 @@ const traverse = (tag, i) => {
         return null;
     }
 }
+```
+# Search
+
+Search is implemented entirely on the frontend for faster runtime. Any time the search modal or page is opened, posts have already been fetched and are in state and therefore any querying can be done by filtering down what's already in state. Search is implemented naively with JS's built-in regex functions like RegExp.test() and RegExp.match(). 
+
+---
+![](searchReadMe.gif)
+
+```
+    searchRegex() {
+        let searchTerm = this.props.searchTerm;
+        let regex = RegExp(searchTerm, "i");
+        let posts = this.props.posts;
+        let newPosts = posts.filter(post => {
+            return regex.test(post.title)
+        })
+        return newPosts;
+    }
+```
+There are some very involved methods for getting dynamic text highlighting as evidenced by this StackOverflow [post](https://stackoverflow.com/questions/8644428/how-to-highlight-text-using-javascript). Instead of using JQuery plug-ins I opted for simple semantic html by conditionally rendering <mark> tags around any word matching with the search term in every SearchItem text. This proved to be the most painless method. 
