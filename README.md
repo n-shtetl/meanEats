@@ -15,4 +15,12 @@ Mean Eats is a pixel-perfect tribute to the Serious Eats website with a more inv
 # Features
 ## Tag System
 
-Navigation on the meanEats website is almost entirely achieved by tags. 
+Navigation on the meanEats website is achieved almost entirely by tags. 
+![](tagReadMe.gif)
+---
+You can navigate via tags in the PostShow header shown below
+![](tagHeader.png)
+---
+Or by each PostIndexItem
+![](circledTagBoxes.png)
+---
