@@ -80,3 +80,22 @@ Why organize our tags into a tree?
 
 --- 
 ![](dropdownReadMe.gif)
+---
+Because of the tag tree, rendering the dropdowns above only takes 16 lines of code with a recursive level-order tree traversal function. 
+```
+const traverse = (tag, i) => {  
+    if (tag.subs.length) {
+        return (
+            <ul className={`dropdown${i++}`}>
+                {tag.subs.map(sub => (
+                    <li className="sub-dropdown-element">
+                        {sub.tag_name}
+                        {traverse(sub, i)}
+                    </li>
+                ))}
+            </ul>
+        )
+    } else {
+        return null;
+    }
+}
