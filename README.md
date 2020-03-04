@@ -71,3 +71,12 @@ class Api::TagsController < ApplicationController
         render '/api/tags/index'
     end
 ```
+
+Why organize our tags into a tree? 
+
+1. Because a tree is easier to navigate and search through than a random list of tags and keywords
+
+2. It makes parts of the meanEats UI easier to implement like nested dropdowns
+
+--- 
+![](dropdownReadMe.gif)
