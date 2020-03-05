@@ -126,6 +126,18 @@
     margin-bottom: 5%;
 }
 
+.sub-dropdown-element:hover {
+    
+}
+
+.tagWrapper {
+    display: inline-block;
+}
+
+.tagWrapper:hover {
+    color: #ff3600;
+}
+
 .outermost-recipe-dropdown-div {
     display: block;
     margin-top: 7vh;
