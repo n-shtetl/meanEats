@@ -1,5 +1,6 @@
 import React from 'react';
 import { logout } from '../../util/session_api_util';
+import { Link } from 'react-router-dom';
 
 class PostShow extends React.Component {
     constructor(props) {
@@ -9,11 +10,20 @@ class PostShow extends React.Component {
         this.traverse = this.traverse.bind(this);
         this.scrollToComments = this.scrollToComments.bind(this);
         this.openFacebook = this.openFacebook.bind(this);
+        this.swap = this.swap.bind(this);
         this.state = {
             commentsOpen: true,
             commentPage: 1,
             commentText: ''
         }
+    }
+
+    swap(json) {
+        var ret = {};
+        for(var key in json){
+          ret[json[key]] = key;
+        }
+        return ret;
     }
 
     componentDidMount() {
@@ -262,11 +272,12 @@ class PostShow extends React.Component {
         if (tagIndex && pTTs) {
             tags = pTTs.map(pTT => pTT.tag_id).map(id => tagIndex[id]).reverse();
             if (tags[0] !== undefined) {
-                tags = tags.map(tag => tag.toUpperCase());
+                tags = tags.map(tag => tag);
             } else {
                 tags = [];
             }
         }
+        console.log(tags, this.swap(tagIndex), "here I am");
         let author;
         if (this.props.authors) {
             author = this.props.authors[this.props.post.author_id]
@@ -299,7 +310,7 @@ class PostShow extends React.Component {
                     <div className="tagBox">
                         <div className="tagSubBox">
                         {tags ? tags.map((tag, i) => (
-                            i !== tags.length-1 ? <div className="tagString">{tag + "   / "}</div> : <div className="tagString"><b>{tag}</b></div>
+                            i !== tags.length-1 ? <Link to={`/tags/${this.swap(tagIndex)[tag]}`}><div className="tagString">{tag.toUpperCase() + "   / "}</div></Link> : <Link to={`/tags/${this.swap(tagIndex)[tag]}`}><div className="tagString"><b>{tag.toUpperCase()}</b></div></Link>
                         )) : null}
                         </div>
                     </div>

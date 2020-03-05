@@ -7,7 +7,7 @@ const traverse = (tag, i) => {
             <ul className={`dropdown${i++}`}>
                 {tag.subs.map(sub => (
                     <li className="sub-dropdown-element">
-                        {sub.tag_name}
+                        <div className="tagWrapper">{sub.tag_name}</div>
                         {traverse(sub, i)}
                     </li>
                 ))}

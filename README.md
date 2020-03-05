@@ -12,4 +12,110 @@ Mean Eats is a pixel-perfect tribute to the Serious Eats website with a more inv
 - S3
 - CSS 
 - Heroku
+# Some Features
+## Tag System
 
+Navigation on the meanEats website is achieved almost entirely by tags. 
+![](tagReadMe.gif)
+---
+
+You can navigate via tags in the PostShow header shown below, where you can see how the tags are organized hierarchically.
+![](tagHeader.png)
+---
+
+Or by each PostIndexItem
+![](circledTagBoxes.png)
+---
+
+The tags are arranged in a tree starting at the model level. Scope creates a class method that finds the root of the tag tree. Because a given tag is a parent to and child of another tag, the class has belongs_to and has_many associations on itself.
+
+```
+class Tag < ApplicationRecord 
+  scope: roots, -> { where(parent_id): nil }
+  belongs_to :superior,
+        optional: true,
+        class_name: :Tag,
+        foreign_key: :parent_id
+
+  has_many :subs,
+        class_name: :Tag,
+        foreign_key: :parent_id
+```
+
+In the tags controller, the index action calls on the data method which builds out the tree recursively and is stored in @tags. Instance variable @tagIndex is a straight json list of each tag with its corresponding id. Both are sent back to the browser with every fetchTags call.
+
+```
+class Api::TagsController < ApplicationController 
+    def tree_data 
+        output = []
+        Tag.roots.each do |tag|
+            output << data(tag)
+        end
+        output.to_json
+    end
+
+    def data(tag)
+        subs = []
+        unless tag.subs.blank?
+            tag.subs.each do |sub|
+                subs << data(sub)
+            end
+        end
+        {tag_name: tag.tag, subs: subs}
+    end
+    
+    def index
+        @tags = Tag.find_by(tag: "Root")
+        @tags = data(@tags)
+        @tagIndex = Tag.all.select(:id, :tag)
+        render '/api/tags/index'
+    end
+```
+
+Why organize our tags into a tree? 
+
+1. Because a tree is easier to navigate and search through than a random list of tags and keywords
+
+2. It makes parts of the meanEats UI easier to implement like nested dropdowns
+
+--- 
+![](dropdownReadMe.gif)
+---
+Because of the tag tree, rendering the dropdowns above only takes 16 lines of code with a recursive level-order tree traversal function. 
+```
+const traverse = (tag, i) => {  
+    if (tag.subs.length) {
+        return (
+            <ul className={`dropdown${i++}`}>
+                {tag.subs.map(sub => (
+                    <li className="sub-dropdown-element">
+                        {sub.tag_name}
+                        {traverse(sub, i)}
+                    </li>
+                ))}
+            </ul>
+        )
+    } else {
+        return null;
+    }
+}
+```
+# Search
+
+Search is implemented entirely on the frontend for faster runtime. Any time the search modal or page is opened, posts have already been fetched and are in state and therefore any querying can be done by filtering down what's already in state. Search is implemented naively with JS's built-in regex functions like RegExp.test() and RegExp.match(). 
+
+---
+![](searchReadMe.gif)
+
+```
+    searchRegex() {
+        let searchTerm = this.props.searchTerm;
+        let regex = RegExp(searchTerm, "i");
+        let posts = this.props.posts;
+        let newPosts = posts.filter(post => {
+            return regex.test(post.title)
+        })
+        return newPosts;
+    }
+```
+There are some very involved methods for getting dynamic text highlighting as evidenced by this StackOverflow [post](https://stackoverflow.com/questions/8644428/how-to-highlight-text-using-javascript). Instead of using JQuery plug-ins I opted for simple semantic html by conditionally rendering [mark](https://www.w3schools.com/tags/tag_mark.asp) tags around any word matching with the search term in every SearchItem text. This proved to be the most painless method. 

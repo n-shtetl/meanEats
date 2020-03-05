@@ -57,3 +57,7 @@ a {
     left: 3%;
 }
 
+.buttonTag:hover {
+    background-color: #195a72;
+}
+
