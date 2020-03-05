@@ -1,52 +1,204 @@
 #mainNav {
-    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    align-items: center;
+    margin-right: 80px;
+    height: 50px;
 }
 
-#dropdownMenus {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-weight: 1000;
+html {
+    height: 100%;
+}
+
+.containerDropdown {
+    display: table;
+}
+
+.subElWrap {
+    margin-left: 10px;
 }
 
 .dropdown {
+    display: table-cell;
+    vertical-align: middle;
     cursor: pointer;
-    display: inline-block;
     position: relative;
+    font-size: 115%;
+    padding: 0%;
+    height: 50px;
+
 }
 
-.dropdown:hover .dropdownElements {
+/* ------ Arrow styling -------- */
+
+.upArrow  {
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    width: 0; 
+    height: 0; 
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 10px solid rgb(48,162,204);
+  }
+
+#cultureArrow {
+    margin-left: -32px;
+    visibility: hidden;
+}
+
+#productArrow {
+    margin-left: -30px;
+    visibility: hidden;
+}
+
+#howToArrow {
+    margin-left: -30px;
+    visibility: hidden;
+
+}
+
+#recipeArrow {
+    margin-left: -30px;
+    visibility: hidden;
+}
+
+#profileUpArrow {
+    margin-left: -33px;
+    top: 40px;
+    visibility: hidden;
+}
+
+
+/* dropdown triangle css ------------- */
+#recipeDropdown:hover .dropdownElements {
     visibility: visible;
 }
 
+#recipeDropdown:hover #recipeArrow {
+    visibility: visible;
+}
+
+#productDropdown:hover .dropdownElements {
+    visibility: visible;
+}
+
+#productDropdown:hover #productArrow {
+    visibility: visible;
+}
+
+#howToDropdown:hover .dropdownElements {
+    visibility: visible;
+}
+
+#howToDropdown:hover #howToArrow {
+    visibility: visible;
+}
+
+#cultureDropdown:hover .dropdownElements {
+    visibility: visible;
+}
+
+#cultureDropdown:hover #cultureArrow {
+    visibility: visible;
+}
+
+/* #profileIcon:hover + div {
+    visibility: visible;
+}
+
+#profileIcon:hover ~ #profileUpArrow {
+    visibility: visible;
+}
+
+#profileIcon:hover .profileDiv {
+    visibility: visible;
+} */
+
+#profileDiv:hover div {
+    visibility: visible;
+}
+
+.profileDropdownElement:hover .profileDropdownInter {
+    background-color: rgb(50, 133, 164);
+    cursor: pointer;
+}
+
+/* ------------------------------------ */
+
 .dropdownElements {
-    background-color: #429dff;
+    background-color: rgb(48,162,204);
     position: absolute;
-    top: 20px;
+    top: 50px;
     color: white;
     text-align: left;
-    font-family: 'Raleway';
-    font-weight: 200;
+    font-family: Helvetica;
+    font-weight: 100;
     visibility: hidden;
+    font-size: 90%;
+}
+
+
+#productRecs {
+    left: 50%;
     width: 200px;
+    margin-left: -100px;    
+}
+
+#howTos {
+    width: 200px;
+    left: 50%;
+    margin-left: -100px;
+}
+
+#recipes {
+    width: 170px;
+    left: 50%;
+    margin-left: -85px;
+}
+
+#culture {
+    width: 180px;
+    left: 50%;
+    margin-left: -90px;
+}
+
+#profile {
+    width: 120px;
+    left: 50%;
+    margin-left: -60px;
 }
 
 .dropdownSubElement:hover {
-    background-color: rgb(49, 74, 118);
+    background-color:rgb(50, 133, 164);
 }
 
 
 .dropdownElement {
-    margin: 10px;
-    padding-right: 10px;
+    
+    margin-top: 10px;
     width: 100%;
     clear: both;
 }
 
 
 .dropdownSubElement {
-    margin: 4px 0px 4px 0px;
-    width: 180px;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.flexDropdownElement {
+    margin-left: 7px;
+    
+}
+
+
+
+.browseBy {
+    
 }
 
 #loginLink {
@@ -66,53 +218,61 @@
     width: 100%;
     align-items: center;
     justify-content: space-between;
+    height: 50px;
 }
 
-.active {
-    background-color: red;
-}
 
 #greetingText {
     padding: 0;
     margin-bottom: 6px;
 }
 
-#logoutButton {
-	box-shadow:inset 0px 1px 0px 0px #8588b0;
-	background:linear-gradient(to bottom, #9bb8ff 5%, #2caeff 100%);
-	background-color:#97afff;
-	border-radius:6px;
-	border:1px solid #2667d8;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:'Fira Sans';
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #b23e35;
-}
-#logoutButton:hover {
-	background:linear-gradient(to bottom, #5fa7ff 5%, #8f9cff 100%);
-	background-color:#98c6ff;
-}
-#logoutButton:active {
-	position:relative;
-	top:1px;
+#profileIcon {
+    width: 100%;
+    height: auto;
+    padding: 0%;
 }
 
-#bannerBar {
-    background-color: #98c6ff;
-    height: 3px;
+#profileIcon:hover {
+    cursor:pointer;
+}
+
+#logoutDiv:hover {
+    cursor: pointer;
+}
+
+#profileDiv {
+    max-width: 50px;
+    max-height: 50px;
+    position: relative;
+}
+
+#profileIcon {
+    width: 80%;
+    height: 80%;
+}
+
+.bannerBar {
+    background-color: rgb(48,162,204);
+    height: 2px;
     width: 100% ;
+    transition-property: background-color;
+    transition-duration: 2s;
 }
 
-#progressBar {
-    height: 3px;
-    width: 0%;
-    background-color: #000000;
+.thickBar {
+    width: 100%;
+    height: 4px;
+    background-color: rgba(161, 187, 196, 0.5);
 }
+
+.progressBar {
+    height: 4px;
+    background-color: #30a2cc;
+    width: 0.5%; 
+}
+
+
 
 #titleText {
     margin-left: 25px;
@@ -120,7 +280,11 @@
 }
 
 #mainIcon {
-    margin-left: 30px;
+    height: 75px;
+    width: 90px;
+    position: absolute;
+    top: 10%;
+    left: 5%;
 }
 
 #iconAndTitle {
@@ -128,6 +292,21 @@
     flex-direction: column;
     justify-content: center;
 }
+
+#searchIcon:hover {
+    cursor:pointer;
+}
+
+#searchIcon {
+    width: 80%;
+    height: 80%;
+}
+
+#searchDiv {
+    max-width: 50px;
+    max-height: 50px;
+}
+
 
 #greetingAndLogout {
     display: flex;
@@ -139,10 +318,50 @@
     width: 100%;
     background-color: #efefef;
     position: fixed;
-    
+    color: #383c45;
+    z-index: 1;
 }
 
 .collapse {
     height: 50px;
 }
 
+.profileDropdown {
+    width: 120px;
+    background-color: rgb(48,162,204);
+    position: absolute;
+    left: 50%;
+    margin-left: -60px;
+    top: 47px;
+    visibility: hidden;
+}
+
+.profileDropdownElement {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.profileDropdownSubElement {
+    margin-left: 5px;
+    font-weight: 100;
+    font-family: Helvetica;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.profileDropdownInter {
+    background-color: rgb(48,162,204);
+    width: 100%;
+    height: 35px;
+}
+
+.loginPage {
+    margin-top: 100px;
+}
+
+.signUpHere:hover {
+    color: rgb(48,162,204);
+}

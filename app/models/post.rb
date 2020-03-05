@@ -8,6 +8,8 @@ class Post < ApplicationRecord
 
     has_many_attached :photos
 
+    has_one_attached :video
+
     has_many :posttotags,
         primary_key: :id,
         foreign_key: :post_id,
@@ -16,4 +18,14 @@ class Post < ApplicationRecord
     has_many :tags,
         through: :posttotags,
         source: :tag
+
+    has_many :comments,
+        primary_key: :id,
+        foreign_key: :post_id,
+        class_name: :Comment
+
+    has_many :steps,
+        primary_key: :id,
+        foreign_key: :post_id,
+        class_name: :Step
 end

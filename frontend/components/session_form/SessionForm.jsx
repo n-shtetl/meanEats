@@ -8,16 +8,37 @@ class SessionForm extends React.Component {
             email: '',
             password: ''
         }
-        this.submitDemoUser = this.submitDemoUser.bind(this);
+        // this.submitDemoUser = this.submitDemoUser.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDemoLogin = this.handleDemoLogin.bind(this);
+        this.loginGuest = this.loginGuest.bind(this);
     }
+
+    loginGuest(username, password) {
+        if (username.length > 0) {
+          this.setState({ username: [this.state.username] + username.shift() }, 
+            () => setTimeout(() => this.loginGuest(username, password), 25));
+        } else if (password.length > 0) {
+          this.setState({ password: [this.state.password] + password.shift() }, 
+            () => setTimeout(() => this.loginGuest(username, password), 25));
+        } else {
+          return this.handleSubmit();
+        }
+      }
+
+    handleDemoLogin() {
+        let username = "demoUser".split('');
+        let password = "password".split('');
+        this.setState({ username: "", password: "" }, () => this.loginGuest(username, password));
+    }
+
+      
 
     componentWillUnmount() {
         this.props.clearErrors();
     }
 
     handleSubmit(e) {
-        e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
     }
@@ -60,7 +81,7 @@ class SessionForm extends React.Component {
             return (
                 <button id='demoLoginButton' className="button"
                         type="submit" 
-                        onClick={this.submitDemoUser}>
+                        onClick={this.handleDemoLogin}>
                             Demo Login
                 </button>
             )

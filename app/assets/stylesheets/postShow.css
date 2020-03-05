@@ -1,21 +1,32 @@
 .postShow {
-    margin-top: 200px;
-    width: 90%;
+    width: 62%;
     background-color: rgb(255,255,255);
     margin: 0 auto;
-    margin-top: 200px;
+    margin-top: 100px;
+    margin-left: 31px;
+    color: #3d414a;
 }
 
 .postShowTitle {
-    text-align: center;
+    text-align: left;
     padding-top: 20px;
+    font-size: 2.5em;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.divider {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(239,239,239);
 }
 
 .postShowImageWrapper {
-    width: inherit;
+    width: 90%;
     height: inherit;
     margin: 0 auto;
     padding: 0;
+    margin-bottom: 40px;
 }
 
 .postShowImage {
@@ -23,6 +34,17 @@
     max-height: 100%;
 }
 
+.starImageWrapper {
+    width: 50%;
+    height: inherit;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.starImage {
+    max-width: 100%;
+    max-height: 100%;
+}
 .postShowIngredients {
     width: 50%;
 }
@@ -44,5 +66,514 @@
 }
 
 .postShowDate {
+    text-align: left;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #999999;
+    font-size: 0.8em;
+}
+
+.commentBox {
+    padding: 5%;
+}
+
+.greetingAndOpenOrClose {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6%;
+}
+
+.helloUsername {
+    font-weight: 100;
+    font-size: 0.9em;
+}
+
+.openOrClose {
+    color: #ff3600;
+    font-weight: 1000;
+    font-size: 1.1em;
+}
+
+.pageLinks {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 2%;
+    color: #ff3600;
+}
+
+.pageLinks:hover {
+    cursor:pointer;
+}
+
+.commentPagination {
+    margin-bottom: 4%
+}
+
+.pageLink {
+    padding-right: 4px;
+}
+
+.commentNumbers {
+    color: #3d414a;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.commentBody {
+    margin-bottom: 5%;
+}
+
+.usernameAndTimestamp {
+    margin-right: 25px;
+}
+
+.usernameTimeStampAndBody {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 25px;
+    padding-bottom: 53px;
+    border-bottom: solid 1px #d7d9db;
+}
+
+.commentUsername {
+    font-size: 0.8em;
+    margin-bottom: 5px;
+}
+
+.commentTimestamp {
+    font-size: 0.8em;
+}
+
+.addCommentContainer {
+    margin-top: 64px;
+    display: block;
     text-align: center;
+}
+
+.addCommentHeader {
+    margin-bottom: 22px;
+    font-weight: 1000;
+    font-size: 1.3em;
+}
+
+.textField {
+    width: 70%;
+    height: 213px;
+    resize: none;
+    margin-bottom: 30px;
+}
+
+.textField:focus {
+    border: solid 1px #ff3600;
+}
+
+.postCommentButton {
+    padding-bottom: 2%;
+    padding-top: 2%;
+    color: #ff3600;
+    border: 2px solid #ff3600;
+    width:140px;
+    height: 18px;
+    font-size: 0.9em;
+    transition: background-color 0.25s;
+    margin: 0 auto;
+    font-weight: 1000;
+}
+
+.postCommentButton:hover {
+    cursor:pointer;
+    color: white;
+    background-color: #ff3600;
+}
+
+.postShowContainer {
+    margin-top: 0;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.postShowVideo {
+    width: 400px;
+    height: 300px;
+    position: fixed;
+    left: 70%;
+    top: 14.5%;
+}
+
+.tagBox {
+    background-color: #30a2cc;
+    height: 24px;
+}
+
+.tagSubBox {
+    display: flex;
+    flex-direction: row;
+    background-color: #30a2cc;
+    color: white;
+    height: 100%;
+    align-items: center;
+    margin-left: 13px;
+    font-size: 0.7em;
+}
+
+.tagString {
+    margin-right: 3px;
+    transition-property: color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+}
+
+.tagString:hover {
+    cursor: pointer;
+    color: #383c45;
+}
+
+.postShowEmailLink { 
+    margin-right: 11px;
+    position: relative;
+    z-index: 1;
+}
+
+.postShowLinks {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+  
+}
+
+.postShowCommentsLink:hover {
+    cursor:pointer;
+}
+
+.postShowCommentsLink {
+    margin-right: 13px;
+    position: relative;
+    z-index: 1;
+    margin-left: 13px;
+}
+
+.commentNumberCircle {
+    position: absolute;
+    z-index: 2;
+    top: -3px;
+    left: 17px;
+}
+
+.commentNumber {
+    position: absolute;
+    z-index: 0;
+    bottom: 8px;
+    left: 2px;
+    font-size: 0.3em;
+    font-weight: 500;
+    color: white;
+}
+
+.postShowCommentCircle {
+    position: absolute;
+    z-index: -1;
+    left: -8px;
+    top: -6px;
+}
+
+.postShowEmailCircle {
+    position: absolute;
+    z-index: -1;
+    left: -8px;
+    top: -6px;
+}
+
+circle {
+    transition-property: fill;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+}
+
+circle:hover {
+    fill: #f0cc64;
+}
+
+.postShowEmailLink:hover circle {
+    fill: #f0cc64;
+}
+
+.postShowCommentsLink:hover .bigCircle {
+    fill: #f0cc64;
+}
+
+.postShowFacebookLink {
+    margin-left: 13px;
+    position: relative;
+    z-index: 1;
+}
+
+.postShowFacebookCircle {
+    position: absolute;
+    z-index: -1;
+    left: -8px;
+    top: -6px;
+}
+
+.postShowFacebookLink:hover circle {
+    fill: #f0cc64;
+}
+
+.postAuthorName {
+    width: 90%;
+    text-align: left;
+    font-size: 1em;
+    margin: 0 auto;
+    margin-top: 33px;
+}
+
+.postShowKicker {
+    width: 90%;
+    text-align: left;
+    font-size: 1em;
+    margin: 0 auto;
+    margin-top: 33px;
+    color: #3e424b
+}
+
+.stepTitle {
+    width: 70%; 
+    margin: 0 auto;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #30a2cc;
+    font-weight: 700;
+}
+
+.stepBody {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    font-size: 1.05em;
+    line-height: 27.5px;
+}
+
+.paragraphContainer {
+    margin-bottom: 25px;
+}
+
+.authorBio {
+    width: 100%;
+    margin-bottom: 30px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    border-top: 1px solid #d7d9db;
+    border-bottom: 1px solid #d7d9db;
+}
+
+.authorBioContainer {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+
+.authorBioName {
+    color: rgb(24, 24, 24);
+    font-weight: 800;
+    margin-right: 16px;
+}
+
+.authorBioTitle {
+    font-weight: 100;
+}
+
+.authorAvatar {
+    border-radius: 75%;
+}
+
+.authorBioText {
+    display: flex;
+    flex-direction: row;
+}
+
+.authorBioTextContainer {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    justify-content: space-around;
+}
+
+.authorBioPara {
+    font-size: 0.8em;
+}
+
+.postShowDirections {
+    width: 150%;
+}
+
+.directionsText {
+    margin-bottom: 25px;
+    font-weight: 100;
+    line-height: 27.5px;
+}
+
+.postShowIngredients {
+    line-height: 27.5px;
+}
+.ingredientsText {
+    font-weight: 100;
+    line-height: 27.5px;
+}
+
+.ingredientsTitle {
+    margin-bottom: 25px;
+    font-size: 1.5em;
+    color: #30a2cc;
+    font-weight: 800;
+}
+
+.directionsTitle {
+    color: #30a2cc;
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+.recipeBody {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 40px;
+    line-height: 27.5px;
+}
+
+.whyItWorks {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 27.5px;
+
+}
+
+.whyItWorksItem {
+    margin-bottom: 20px;
+
+}
+
+.whyItWorksTitle {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    font-size: 1.5em;
+    color: #30a2cc;
+    font-weight: 800;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li::before {
+    content: "\2022";
+    color: #f0cc64;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    font-size: 1.3em;
+}
+
+ol {
+    list-style: none;
+    counter-reset: my-counter;
+  }
+  ol li {
+    counter-increment: my-counter;
+  }
+  ol li::before {
+    content: counter(my-counter) ". ";
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+  }
+
+.recipeInfo {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid #d7d9db;
+    border-bottom: 1px solid #d7d9db;
+}
+
+.yield, .activeTime, .totalTime, .rated {
+    margin: 0 auto;
+    text-align: center;
+    line-height: 27.5px;
+}
+
+.yieldTitle, .activeTimeTitle, .totalTimeTitle, .ratedTitle {
+    font-style: bold;
+    color: #464952;
+    font-size: 1.1em;
+    font-weight: 1000;
+    margin-bottom: 8px;
+}
+
+.slash {
+    margin-left: 25px;
+    margin-right: 25px;
+    line-height: 50px;
+    font-size: 2em;
+    color: #d7d9db;
+}
+
+.specialEquipmentAndNotes {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid #d7d9db;
+}
+
+.specialEquipmentTitle {
+    margin-bottom: 10px;
+    margin-top: 30px;
+    font-size: 1.1em;
+    color: #30a2cc;
+    font-weight: 800;
+}
+
+.notesTitle {
+    margin-bottom: 10px;
+    margin-top: 30px;
+    font-size: 1.1em;
+    color: #30a2cc;
+    font-weight: 800;
+}
+
+.notesPara {
+    line-height: 22px;
+    font-size: 0.8em;
+    margin-bottom: 10px;
+}
+
+.specialEquipmentText {
+    line-height: 22px;
+    font-size: 0.8em;
+}
+
+.postShowLinks2 {
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+  
 }

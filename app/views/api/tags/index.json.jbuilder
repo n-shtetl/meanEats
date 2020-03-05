@@ -1,5 +1,2 @@
-@tags.each do |tag|
-    json.set! tag.id do
-        json.extract! tag, :id, :tag
-    end
-end
+json.set! :tags, @tags
+json.tagIndex @tagIndex

@@ -1,0 +1,127 @@
+.featured {
+    height: 100%;
+}
+
+.featured-posts {
+   display: flex;
+   height: 595px;
+   margin-left: 43px;
+}
+
+.primary-featured-post {
+    position: relative;
+    height: 100%;
+    width: 66%;
+    margin-right: 6px;
+}
+
+.secondary-tertiary-wrapper {
+    width: 30%;
+}
+
+
+.primary-featured-post img {
+    height: 100%;
+    width: 100%;
+}
+
+.secondary-featured-post {
+   position: relative;
+   margin-left: 6px;
+   height: 50%;
+   width: 100%;
+   margin-bottom: 6px;
+}
+
+.secondary-featured-post img {
+   height: 100%;
+   width: 100%;
+}
+
+.tertiary-featured-post {
+    position: relative;
+    height: 49%;
+    width: 100%;
+    margin-left: 6px;
+    margin-top: 0px;
+}
+
+.tertiary-featured-post img {
+    height: 100%;
+    width: 100%;
+}
+
+.secondaryFeaturedTextContainer {
+    position: absolute;
+    bottom: 50px;
+    width: 300px;
+    left: 21px;
+    color: white;
+    font-size: 1.5em;
+    background-color: rgba(0,0,0,0.4);
+    padding: 6%;
+    text-shadow: 1px 1px 4px #000000;
+}
+
+.tertiaryFeaturedTextContainer {
+    position: absolute;
+    bottom: 50px;
+    width: 300px;
+    left: 21px;
+    color: white;
+    font-size: 1.5em;
+    background-color: rgba(0,0,0,0.4);
+    padding: 6%;
+    text-shadow: 1px 1px 4px #000000;
+}
+
+.tag-box {
+    text-shadow: none;
+    border: 1px solid white;
+    background-color: #30a2cc;
+    font-size: 16px;
+}
+
+.tag-box:hover {
+    background-color: #195a72;
+}
+
+#tertiary-tag {
+    height: 5%;
+    width: 18%;
+    padding: 2%;
+    margin-bottom: 20px;
+}
+
+#secondary-tag {
+    height: 5%;
+    width: 19%;
+    padding: 2%;
+    margin-bottom: 20px;
+}
+
+#primary-tag {
+    height: 5%;
+    width: 12%;
+    padding: 2%;
+    margin-bottom: 20px;
+}
+
+.primaryFeaturedTextContainer {
+    position: absolute;
+    width: 500px;
+    bottom: 30%;
+    left: 8%;
+    color: white;
+    font-size: 3em;
+    background-color: rgba(0,0,0,0.4);
+    padding: 6% 15% 6% 6%;
+    text-shadow: 1px 1px 4px #000000;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+
