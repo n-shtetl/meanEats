@@ -28,3 +28,9 @@ bundle.js.map
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+Posts.txt
+PostToTags.txt
+Tags.txt
+Users.txt
+Steps.txt

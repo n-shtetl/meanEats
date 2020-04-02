@@ -277,7 +277,6 @@ class PostShow extends React.Component {
                 tags = [];
             }
         }
-        console.log(tags, this.swap(tagIndex), "here I am");
         let author;
         if (this.props.authors) {
             author = this.props.authors[this.props.post.author_id]
@@ -299,9 +298,6 @@ class PostShow extends React.Component {
         if (this.props.post.notes) {
             separatedNotes = this.props.post.notes.split("\n")
         }
-        console.log(separatedSteps);
-        console.log(this.props);
-        console.log(author);
         return (
             <div className="postShowContainer">
                 <div className="postShowVideoContainer"><video className="postShowVideo" controls muted  autoplay="autoplay"><source id="video" src={this.props.post.video_url} type="video/mp4"></source></video></div>

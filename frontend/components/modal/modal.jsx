@@ -25,12 +25,10 @@ class Modal extends React.Component {
     searchRegex() {
       let searchTerm = $('#searchBar').val();
       let regex = RegExp(searchTerm, "i");
-      console.log(regex);
       let posts = this.props.posts;
       let newPosts = posts.filter(post => {
         return regex.test(post.title)
       })
-      console.log(newPosts);
       return searchTerm;
     }
 
@@ -39,7 +37,6 @@ class Modal extends React.Component {
     }
 
     update(field) {
-      console.log(this.state.searchBar)
       return e => this.setState({ [field]: e.currentTarget.value })
     }
 
