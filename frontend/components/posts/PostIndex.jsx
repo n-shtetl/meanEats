@@ -51,7 +51,6 @@ class PostIndex extends React.Component {
         const { posts } = this.props;
         const { postToTags } = this.props;
         const { tags } = this.props;
-        // console.log(tags, "tags");
         let tagIndex = {};
         if (tags.length) {
             let tagsArr = tags[1];
@@ -92,7 +91,7 @@ class PostIndex extends React.Component {
         return (
             <div id="postIndexWrapper">
             <FeaturedPosts className="featuredPosts" fP={featuredPosts}/>
-            <RecipeDropdowns tags={tags} />
+            <RecipeDropdowns tags={tags} tagIndex={this.swap(tagIndex)} />
             <div className="howToHeader">HOW-TOS</div>
             <div className="howToPosts">
                 {this.state.allHowTo ? 

@@ -68,7 +68,6 @@ class TagIndex extends React.Component {
             posts = this.props.posts.filter(post => postIds.includes(post.id))
         }
 
-        // console.log(postToTag, "this works");
         return (
             <div className="tagIndex">
                 <div className="tagHeader">

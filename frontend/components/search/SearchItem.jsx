@@ -26,12 +26,10 @@ class SearchItem extends React.Component {
         let regex = RegExp(this.props.searchTerm, "i");
         let filteredSentences;
         let unfilteredSentences;
-        console.log(this.props.post);
         if (this.props.steps.length) {
             let step = this.searchRegex(this.props.searchTerm)
             let stepSentences = step.body.split('.')
             filteredSentences = stepSentences.filter(sentence => regex.test(sentence));
-            console.log(filteredSentences, "here i am");
         }
         
         return (

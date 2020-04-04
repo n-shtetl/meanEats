@@ -1,14 +1,15 @@
 import React from 'react';
 import { $CombinedState } from 'redux';
+import { Link } from 'react-router-dom';
 
-const traverse = (tag, i) => {  
+const traverse = (tag, i, tagIndex) => {  
     if (tag.subs.length) {
         return (
             <ul className={`dropdown${i++}`}>
                 {tag.subs.map(sub => (
                     <li className="sub-dropdown-element">
-                        <div className="tagWrapper">{sub.tag_name}</div>
-                        {traverse(sub, i)}
+                        <Link to={`/tags/${tagIndex[sub.tag_name]}`}><div className="tagWrapper">{sub.tag_name}</div></Link>
+                        {traverse(sub, i, tagIndex)}
                     </li>
                 ))}
             </ul>
@@ -16,6 +17,14 @@ const traverse = (tag, i) => {
     } else {
         return null;
     }
+}
+
+function swap(json) {
+    var ret = {};
+    for(var key in json){
+      ret[json[key]] = key;
+    }
+    return ret;
 }
 
 const display = (div) => {
@@ -44,6 +53,8 @@ const display = (div) => {
 
 
 const RecipeDropdowns = (props) => {
+    console.log(props.tagIndex, "here i am");
+    let tagIndex = props.tagIndex;
     if (props.tags.length) {
         const recipes = props.tags[0].subs[0];
         return (
@@ -57,7 +68,7 @@ const RecipeDropdowns = (props) => {
                         </div>
                         <div className="dropdown-triangle"/>
                         <div className={`sub-dropdowns${i}`}>
-                            {traverse(tag,0)}
+                            {traverse(tag,0, tagIndex)}
                         </div>
                     </div>
                 ))}

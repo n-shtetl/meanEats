@@ -79,11 +79,11 @@ class SessionForm extends React.Component {
     renderDemoLogin() {
         if (this.props.formType === 'login') {
             return (
-                <button id='demoLoginButton' className="button"
+                <div id='demoLoginButton' className="button"
                         type="submit" 
                         onClick={this.handleDemoLogin}>
                             Demo Login
-                </button>
+                </div>
             )
         }
     }
