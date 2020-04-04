@@ -1,0 +1,1 @@
+[{"id"=>128, "username"=>"demoUser", "email"=>"gmail", "password_digest"=>"$2a$12$AYI3KcJZ78RifTmxpMtLguJAdvqAeSzyxTeLgCbFtbGqu9dBGD1RO", "session_token"=>"LlBlKUwtSsFFfQgXqZJG8A", "created_at"=>Tue, 17 Mar 2020 21:36:54 UTC +00:00, "updated_at"=>Tue, 31 Mar 2020 21:35:49 UTC +00:00}]
