@@ -17,7 +17,7 @@ class FeaturedPost extends React.Component {
         const tertiary = fP[2];
         return ( 
             <div className="featured"> 
-                {fP.length > 0 ? (
+                {fP.length === 3 ? (
                 <div className="featured-posts"> 
                     <div className="primary-featured-post">
                         <Link to={`/posts/${primary.id}`}>

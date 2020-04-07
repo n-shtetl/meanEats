@@ -285,6 +285,8 @@ class PostShow extends React.Component {
         if (steps) {
             separatedSteps = steps.map(step => step.body.split("\n"))
         }
+        console.log(separatedSteps, "separatedSteps");
+        console.log(steps, "steps");
         let separatedRecipeBody;
         if (this.props.post.recipe_body) {
             separatedRecipeBody = this.props.post.recipe_body.split("\n");
@@ -400,12 +402,13 @@ class PostShow extends React.Component {
                             </div>
                         ))}
                     </div> */}
-                    {steps ? steps.map(step => (
+                    {steps ? steps.map((step1, i) => (
                                 <div className="stepsContainer">
-                                    <div className="stepTitle">{step.title}</div>
-                                    {step.photoUrl ? <div className="postShowImageWrapper"><img src={step.photoUrl} className="postShowImage"/></div>:null}
-                                    <div className="stepBody">{separatedSteps.map(step => (
-                                        <div className="paragraphContainer">{step}<br/></div>
+                                    <div className="stepTitle">{step1.title}</div>
+                                    {step1.photoUrl ? <div className="postShowImageWrapper"><img src={step1.photoUrl} className="postShowImage"/></div>:null}
+                                    <div className="stepBody">{separatedSteps.map( (step2, j) => (
+                                        i === j ? <div className="paragraphContainer">{step2.map(para => <div className="stepParagraph">{para}</div>)}</div> : null
+                                        // <div className="paragraphContainer">{i === j ? step2 : null}<br/></div>
                                     ))}</div>
                                 </div>
                             ))

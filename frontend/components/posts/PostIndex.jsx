@@ -58,7 +58,6 @@ class PostIndex extends React.Component {
                 tagIndex[tag.id] = tag.tag;
             })
         }
-        console.log(tagIndex), "tagIndex";
         let tagsInOrder;
         if (tags.length) {
             tagsInOrder = this.traverse(tags[0])
@@ -87,7 +86,6 @@ class PostIndex extends React.Component {
                 culturePosts.push(post);
             }
         })
-        // console.log(this.props);
         return (
             <div id="postIndexWrapper">
             <FeaturedPosts className="featuredPosts" fP={featuredPosts}/>

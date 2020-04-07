@@ -53,7 +53,6 @@ const display = (div) => {
 
 
 const RecipeDropdowns = (props) => {
-    console.log(props.tagIndex, "here i am");
     let tagIndex = props.tagIndex;
     if (props.tags.length) {
         const recipes = props.tags[0].subs[0];
