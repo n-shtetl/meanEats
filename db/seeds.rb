@@ -1385,3 +1385,16 @@ file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/
 step7 = Step.find(7).photos.attach(io: file, filename: 'filename')
 i += 1
 
+post = Post.find(i)
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/featured2/header.jpg")
+post.photos.attach(io: file, filename: 'filename')
+i += 1
+
+post = Post.find(i)
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/featured2/header.jpg")
+post.photos.attach(io: file, filename: 'filename')
+
+step2 = Step.find(9)
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/featured3/step2.jpg")
+step2.photos.attach(io: file, filename: 'filename')
+i += 1
