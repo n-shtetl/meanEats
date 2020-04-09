@@ -1391,7 +1391,7 @@ post.photos.attach(io: file, filename: 'filename')
 i += 1
 
 post = Post.find(i)
-file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/featured2/header.jpg")
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/featured3/header.jpg")
 post.photos.attach(io: file, filename: 'filename')
 
 step2 = Step.find(9)
