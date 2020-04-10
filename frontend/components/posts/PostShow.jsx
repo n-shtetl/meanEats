@@ -285,8 +285,6 @@ class PostShow extends React.Component {
         if (steps) {
             separatedSteps = steps.map(step => step.body.split("\n"))
         }
-        console.log(separatedSteps, "separatedSteps");
-        console.log(steps, "steps");
         let separatedRecipeBody;
         if (this.props.post.recipe_body) {
             separatedRecipeBody = this.props.post.recipe_body.split("\n");
@@ -307,7 +305,7 @@ class PostShow extends React.Component {
                     
                     <div className="tagBox">
                         <div className="tagSubBox">
-                        {tags ? tags.map((tag, i) => (
+                        {tags ? tags.reverse().map((tag, i) => (
                             i !== tags.length-1 ? <Link to={`/tags/${this.swap(tagIndex)[tag]}`}><div className="tagString">{tag.toUpperCase() + "   / "}</div></Link> : <Link to={`/tags/${this.swap(tagIndex)[tag]}`}><div className="tagString"><b>{tag.toUpperCase()}</b></div></Link>
                         )) : null}
                         </div>
