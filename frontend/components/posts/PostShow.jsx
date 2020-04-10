@@ -44,7 +44,7 @@ class PostShow extends React.Component {
     }
 
     openFacebook() {
-        debugger
+        
         window.open(
             'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
             'facebook-share-dialog', 
@@ -282,9 +282,7 @@ class PostShow extends React.Component {
             author = this.props.authors[this.props.post.author_id]
         }
         let separatedSteps;
-        debugger
         if (steps) {
-            debugger
             separatedSteps = steps.map(step => step.body.split("\n"))
         }
         console.log(separatedSteps, "separatedSteps");
