@@ -1398,3 +1398,138 @@ step2 = Step.find(9)
 file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/featured3/step2.jpg")
 step2.photos.attach(io: file, filename: 'filename')
 i += 1
+
+#post 4
+
+post4 = Post.find(4)
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/post4/header.jpg")
+post4.photos.attach(io: file, filename: 'filename')
+
+step2 = Step.find(11)
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/post4/step2.jpg")
+step2.photos.attach(io: file, filename: 'filename')
+
+step3 = Step.find(12)
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/post4/step3.jpg")
+step3.photos.attach(io: file, filename: 'filename')
+
+step4 = Step.find(13)
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/post4/step4.jpg")
+step4.photos.attach(io: file, filename: 'filename')
+
+#post5
+post5 = Post.find(5)
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/post5/header.jpg")
+post5.photos.attach(io: file, filename: 'filename')
+
+step2 = Step.find(15)
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/post5/step2.jpg")
+step2.photos.attach(io: file, filename: 'filename')
+
+step3 = Step.find(16)
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/post5/step3.jpg")
+step3.photos.attach(io: file, filename: 'filename')
+
+step4 = Step.find(17)
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/post5/step4.jpg")
+step4.photos.attach(io: file, filename: 'filename')
+
+#post6 nonstick skillet duck leg confit
+post6 = Post.find(6)
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/post6/header.jpg")
+post6.photos.attach(io: file, filename: 'filename')
+
+step2 = Step.find(19)
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/post6/step2.jpg")
+step2.photos.attach(io: file, filename: 'filename')
+
+step3 = Step.find(20)
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/post6/step3.jpg")
+step3.photos.attach(io: file, filename: 'filename')
+
+#post7 duck confit koji twist
+post7 = Post.find(7)
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/post7/header.jpg")
+post7.photos.attach(io: file, filename: 'filename')
+
+step2 = Step.find(23)
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/post7/step2.jpg")
+step2.photos.attach(io: file, filename: 'filename')
+
+step4 = Step.find(25)
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/post7/step4.jpg")
+step4.photos.attach(io: file, filename: 'filename')
+
+#post8 dry age duck
+post8 = Post.find(8)
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/post8/header.jpg")
+post8.photos.attach(io: file, filename: 'filename')
+
+step3 = Step.find(29)
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/post8/step3.jpg")
+step3.photos.attach(io: file, filename: 'filename')
+
+step5 = Step.find(31)
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/post8/step5.jpg")
+step5.photos.attach(io: file, filename: 'filename')
+
+#post9 
+post9 = Post.find(9)
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/post9/header.jpg")
+post9.photos.attach(io: file, filename: 'filename')
+
+step2 = Step.find(33)
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/post9/step2.jpg")
+step2.photos.attach(io: file, filename: 'filename')
+
+step3 = Step.find(34)
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/post9/step3.jpg")
+step3.photos.attach(io: file, filename: 'filename')
+
+#post10
+
+post10 = Post.find(10)
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/post10/header.jpg")
+post10.photos.attach(io: file, filename: 'filename')
+
+step2 = Step.find(36)
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/post10/step2.jpg")
+step2.photos.attach(io: file, filename: 'filename')
+
+#post11
+post11 = Post.find(11)
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/post11/header.jpg")
+post11.photos.attach(io: file, filename: 'filename')
+
+step2 = Step.find(38)
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/post11/step2.jpg")
+step2.photos.attach(io: file, filename: 'filename')
+
+step3 = Step.find(39)
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/post11/step3.jpg")
+step3.photos.attach(io: file, filename: 'filename')
+
+step4 = Step.find(40)
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/post11/step4.jpg")
+step4.photos.attach(io: file, filename: 'filename')
+
+step5 = Step.find(41)
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/post11/step5.jpg")
+step5.photos.attach(io: file, filename: 'filename')
+
+#post12
+post12 = Post.find(12)
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/post12/header.jpg")
+post12.photos.attach(io: file, filename: 'filename')
+
+step2 = Step.find(43)
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/post12/step2.jpg")
+step2.photos.attach(io: file, filename: 'filename')
+
+step3 = Step.find(44)
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/post12/step3.jpg")
+step3.photos.attach(io: file, filename: 'filename')
+
+step4 = Step.find(45)
+file = open("https://meaneats-seeds.s3-us-west-1.amazonaws.com/production-seeds/post12/step4.jpg")
+step4.photos.attach(io: file, filename: 'filename')

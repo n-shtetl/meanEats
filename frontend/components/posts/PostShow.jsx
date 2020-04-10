@@ -282,7 +282,9 @@ class PostShow extends React.Component {
             author = this.props.authors[this.props.post.author_id]
         }
         let separatedSteps;
+        debugger
         if (steps) {
+            debugger
             separatedSteps = steps.map(step => step.body.split("\n"))
         }
         console.log(separatedSteps, "separatedSteps");
