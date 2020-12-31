@@ -11,6 +11,8 @@ import { fetchAuthors } from '../../actions/author_actions';
 
 const mapStateToProps = (state, ownProps) => ({
     post: state.entities.posts[ownProps.match.params.postId],
+    postId: ownProps.match.params.postId,
+    posts: state.entities.posts,
     comments: Object.values(state.entities.comments).filter(comment => comment.post_id === Number(ownProps.match.params.postId)),
     users: state.entities.users,
     session: state.session,

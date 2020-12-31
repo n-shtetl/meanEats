@@ -200,8 +200,11 @@ class PostShow extends React.Component {
     }
 
     renderDirections() {
-        const { directions } = this.props.post;
-        if (directions === null || directions === undefined) return null;
+        let { directions } = this.props.post;
+        if (directions === null || directions === undefined) {
+            return null;
+            // directions = this.props.posts[this.props.postId].directions
+        }
         const directionsArr = directions.split("\n");
         return (
             <div className="postShowDirections">
@@ -293,11 +296,18 @@ class PostShow extends React.Component {
         if (this.props.post.why_it_works) {
             separatedWhyItWorks = this.props.post.why_it_works.split("\n");
             firstHalf = separatedWhyItWorks.splice(separatedWhyItWorks.length/2)
+            if (firstHalf[firstHalf.length-1] === "") {
+                firstHalf.pop();
+            }
+            if (separatedWhyItWorks[separatedWhyItWorks.length-1] === "") {
+                separatedWhyItWorks.pop();
+            }
         }
         let separatedNotes;
         if (this.props.post.notes) {
             separatedNotes = this.props.post.notes.split("\n")
         }
+        console.log(this.props.post, this.props.post.directions)
         return (
             <div className="postShowContainer">
                 <div className="postShowVideoContainer"><video className="postShowVideo" controls muted  autoplay="autoplay"><source id="video" src={this.props.post.video_url} type="video/mp4"></source></video></div>
